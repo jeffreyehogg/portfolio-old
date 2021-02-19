@@ -7,7 +7,7 @@ A portfolio built with React and Next.js. Deployed with AWS Amplify. Check out s
 ## Technologies
 
 - JavaScript
-- Python
+- Next.js
 - React
 - AWS
 
