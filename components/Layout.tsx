@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import NavBar from './NavBar';
-import styles from '../styles/Projects.module.css';
+import styles from '../styles/Layout.module.css';
 
 type Props = {
   children?: ReactNode;
@@ -18,10 +18,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     </Head>
     <NavBar />
     {children}
-    <footer>
-      <hr />
-      <span>Copyright Jeff Hogg 2021</span>
-    </footer>
   </div>
 );
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Projects from '../components/Projects';
-import styles from '../styles/Projects.module.css';
 
 const Portfolio = () => {
   return (
@@ -11,10 +10,7 @@ const Portfolio = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>Portfolio</h1>
-
-        <p className={styles.description}>Projects</p>
+      <main>
         <Projects />
       </main>
     </div>
