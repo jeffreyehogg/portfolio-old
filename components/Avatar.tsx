@@ -1,27 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Avatar as MuiAvatar, Button, makeStyles } from '@material-ui/core';
+import { Avatar, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   avatar: {
     transition: 'transform 200ms',
     '&:hover': {
       transform: 'scale(1.09)',
+      opacity: 0.7,
     },
     cursor: 'pointer',
   },
 }));
-const Avatar = () => {
+const MyAvatar = () => {
   const classes = useStyles();
 
   return (
-    <MuiAvatar className={classes.avatar} alt="Jeff Hogg">
+    <Avatar className={classes.avatar} alt="Jeff Hogg">
       <Link href="/">
-        <Image src="/images/me.jpg" width={100} height={100} />
+        <Image src="/assets/me.jpg" width={100} height={100} />
       </Link>
-    </MuiAvatar>
+    </Avatar>
   );
 };
 
-export default Avatar;
+export default MyAvatar;

@@ -9,7 +9,9 @@ const Resume = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>Resume</main>
+      <main>
+        <h1>Resume</h1>
+      </main>
     </div>
   );
 };

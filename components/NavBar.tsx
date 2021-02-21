@@ -11,7 +11,8 @@ import {
   Hidden,
 } from '@material-ui/core';
 import { Menu as MenuIcon } from '@material-ui/icons';
-import Avatar from './Avatar';
+import MyAvatar from './Avatar';
+import Social from './Social';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -20,9 +21,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     menuButton: {
       marginRight: theme.spacing(2),
-    },
-    avatar: {
-      flexGrow: 1,
     },
   })
 );
@@ -42,10 +40,10 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <div className={classes.avatar}>
-            <Avatar />
+          <div className={classes.root}>
+            <MyAvatar />
           </div>
           <Hidden only={['xs', 'sm']}>
             <Link href="/about" passHref>
@@ -54,55 +52,49 @@ export default function MenuAppBar() {
             <Link href="/portfolio" passHref>
               <Button color="inherit">Portfolio</Button>
             </Link>
-            <Link href="/contact" passHref>
-              <Button color="inherit">Contact</Button>
-            </Link>
             <Link href="/resume" passHref>
               <Button color="inherit">Resume</Button>
             </Link>
           </Hidden>
-          <div>
-            <Hidden only={['md', 'lg', 'xl']}>
-              <IconButton
-                aria-controls="menu"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-            </Hidden>
-
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorEl}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={open}
-              onClose={handleClose}
+          <Hidden only={['md', 'lg', 'xl']}>
+            <IconButton
+              aria-controls="menu"
+              aria-haspopup="true"
+              onClick={handleMenu}
+              color="inherit"
+              aria-label="menu"
             >
-              <Link href="/about" passHref>
-                <MenuItem onClick={handleClose}>About</MenuItem>
-              </Link>
-              <Link href="/portfolio" passHref>
-                <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-              </Link>
-              <Link href="/contact" passHref>
-                <MenuItem onClick={handleClose}>Contact</MenuItem>
-              </Link>
-              <Link href="/resume" passHref>
-                <MenuItem onClick={handleClose}>Resume</MenuItem>
-              </Link>
-            </Menu>
+              <MenuIcon />
+            </IconButton>
+          </Hidden>
+          <div>
+            <Social />
           </div>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={open}
+            onClose={handleClose}
+          >
+            <Link href="/about" passHref>
+              <MenuItem onClick={handleClose}>About</MenuItem>
+            </Link>
+            <Link href="/portfolio" passHref>
+              <MenuItem onClick={handleClose}>Portfolio</MenuItem>
+            </Link>
+            <Link href="/resume" passHref>
+              <MenuItem onClick={handleClose}>Resume</MenuItem>
+            </Link>
+          </Menu>
         </Toolbar>
       </AppBar>
     </div>
