@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'row',
   },
   icon: {
-    marginLeft: '1rem',
+    marginRight: '1rem',
     transition: 'transform 200ms',
     '&:hover': {
       transform: 'scale(1.09)',

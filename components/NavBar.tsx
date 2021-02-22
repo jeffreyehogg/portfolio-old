@@ -40,10 +40,15 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="transparent">
         <Toolbar>
           <div className={classes.root}>
-            <MyAvatar />
+            <Link href="/">
+              <MyAvatar />
+            </Link>
+          </div>
+          <div>
+            <Social />
           </div>
           <Hidden only={['xs', 'sm']}>
             <Link href="/about" passHref>
@@ -67,9 +72,7 @@ export default function MenuAppBar() {
               <MenuIcon />
             </IconButton>
           </Hidden>
-          <div>
-            <Social />
-          </div>
+
           <Menu
             id="menu-appbar"
             anchorEl={anchorEl}

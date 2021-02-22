@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Avatar, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -18,9 +17,7 @@ const MyAvatar = () => {
 
   return (
     <Avatar className={classes.avatar} alt="Jeff Hogg">
-      <Link href="/">
-        <Image src="/assets/me.jpg" width={100} height={100} />
-      </Link>
+      <Image src="/images/me.jpg" width={100} height={100} />
     </Avatar>
   );
 };
