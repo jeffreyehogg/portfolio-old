@@ -19,7 +19,7 @@ const MyAvatar = () => {
   return (
     <Link href="/" passHref>
       <Avatar className={classes.avatar} alt="Jeff Hogg">
-        <Image src="/images/me.jpg" width={100} height={100} />
+        <Image src="/images/me.jpg" width={250} height={250} />
       </Avatar>
     </Link>
   );

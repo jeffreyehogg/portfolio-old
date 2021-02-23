@@ -22,14 +22,11 @@ const useStyles = makeStyles((theme: Theme) =>
     menuButton: {
       marginRight: theme.spacing(2),
     },
-    appbar: {
-      color: 'black',
-    },
     button: {
-      marginLeft: '1rem',
+      marginLeft: '2rem',
     },
     avatar: {
-      marginRight: '1rem',
+      marginRight: '2rem',
     },
   })
 );

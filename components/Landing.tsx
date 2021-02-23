@@ -1,22 +1,15 @@
-import Image from 'next/image';
+import React from 'react';
 import styles from '../styles/Landing.module.css';
 
-const Landing = () => (
-  <div>
-    <div className={styles.bgWrap}>
-      <Image
-        alt="Stars"
-        src="/images/space.jpg"
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-      />
+const Landing = () => {
+  return (
+    <div>
+      <p className={styles.landingText}>
+        I'm Jeff Hogg
+        <br />a full-stack developer
+      </p>
     </div>
-    <p className={styles.bgText}>
-      I'm Jeff Hogg
-      <br />a full-stack developer
-    </p>
-  </div>
-);
+  );
+};
 
 export default Landing;
