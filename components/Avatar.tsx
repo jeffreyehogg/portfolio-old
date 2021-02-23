@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Avatar, makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   avatar: {
     transition: 'transform 200ms',
     '&:hover': {

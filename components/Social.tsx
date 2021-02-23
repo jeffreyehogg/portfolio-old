@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import { GitHub, LinkedIn, Email } from '@material-ui/icons';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
   group: {
     display: 'flex',
     flexDirection: 'row',

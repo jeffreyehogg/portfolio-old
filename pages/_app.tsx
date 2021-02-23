@@ -1,21 +1,12 @@
 import React from 'react';
 import { ThemeProvider } from '@material-ui/core/styles';
-import { createMuiTheme, CssBaseline } from '@material-ui/core';
+import { CssBaseline } from '@material-ui/core';
 import Layout from '../components/Layout';
-import '../styles/globals.css';
+import theme from '../src/theme';
 
-const Theme = createMuiTheme({
-  palette: {
-    type: 'dark',
-    primary: {
-      main: '#212121',
-    },
-  },
-});
-
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: any) {
   return (
-    <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <Layout>
         <Component {...pageProps} />
