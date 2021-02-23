@@ -22,6 +22,15 @@ const useStyles = makeStyles((theme: Theme) =>
     menuButton: {
       marginRight: theme.spacing(2),
     },
+    appbar: {
+      color: 'black',
+    },
+    button: {
+      marginLeft: '1rem',
+    },
+    avatar: {
+      marginRight: '1rem',
+    },
   })
 );
 
@@ -40,37 +49,39 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="transparent">
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <div className={classes.root}>
-            <Link href="/">
-              <MyAvatar />
-            </Link>
-          </div>
-          <div>
-            <Social />
-          </div>
           <Hidden only={['xs', 'sm']}>
-            <Link href="/about" passHref>
-              <Button color="inherit">About</Button>
-            </Link>
-            <Link href="/portfolio" passHref>
-              <Button color="inherit">Portfolio</Button>
-            </Link>
-            <Link href="/resume" passHref>
-              <Button color="inherit">Resume</Button>
-            </Link>
+            <div className={classes.root}>
+              <Link href="/about" passHref>
+                <Button className={classes.button} color="inherit">
+                  About
+                </Button>
+              </Link>
+              <Link href="/portfolio" passHref>
+                <Button className={classes.button} color="inherit">
+                  Portfolio
+                </Button>
+              </Link>
+              <Link href="/resume" passHref>
+                <Button className={classes.button} color="inherit">
+                  Resume
+                </Button>
+              </Link>
+            </div>
           </Hidden>
           <Hidden only={['md', 'lg', 'xl']}>
-            <IconButton
-              aria-controls="menu"
-              aria-haspopup="true"
-              onClick={handleMenu}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
+            <div className={classes.root}>
+              <IconButton
+                aria-controls="menu"
+                aria-haspopup="true"
+                onClick={handleMenu}
+                color="inherit"
+                aria-label="menu"
+              >
+                <MenuIcon />
+              </IconButton>
+            </div>
           </Hidden>
 
           <Menu
@@ -98,6 +109,12 @@ export default function MenuAppBar() {
               <MenuItem onClick={handleClose}>Resume</MenuItem>
             </Link>
           </Menu>
+          <div>
+            <Social />
+          </div>
+          <div className={classes.avatar}>
+            <MyAvatar />
+          </div>
         </Toolbar>
       </AppBar>
     </div>
