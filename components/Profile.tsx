@@ -16,8 +16,7 @@ const useStyles = makeStyles(() => ({
   profile: {
     alignItems: 'center',
     textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
+    height: '100vh',
   },
   content: {
     marginTop: '1rem',
