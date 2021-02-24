@@ -46,7 +46,7 @@ export default function MenuAppBar() {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="transparent">
         <Toolbar>
           <Hidden only={['xs', 'sm']}>
             <div className={classes.root}>
