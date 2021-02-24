@@ -4,26 +4,23 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import { Box, Container, Typography, makeStyles } from '@material-ui/core';
 
-const user = {
-  city: 'Napa',
-  state: 'CA',
-  name: 'Jeff Hogg',
-};
-
 const useStyles = makeStyles(() => ({
   img: {
     borderRadius: '50%',
-    boxShadow: '0 0 8px 8px black',
+    // boxShadow: '0 0 8px 8px black',
   },
   imgWrapper: {
-    marginTop: '5rem',
-    marginBottom: '1rem',
+    marginTop: '4rem',
+    marginBottom: '2rem',
   },
   profile: {
     alignItems: 'center',
     textAlign: 'center',
     display: 'flex',
     flexDirection: 'column',
+  },
+  content: {
+    marginTop: '1rem',
   },
 }));
 
@@ -42,23 +39,23 @@ const Profile = () => {
         />
       </div>
       <Typography color="textPrimary" gutterBottom variant="h3">
-        {user.name}
+        Jeff Hogg
       </Typography>
       <Typography color="textSecondary" variant="body1">
-        {`${user.city}, ${user.state}`}
+        Full-stack web developer
+        <br />
+        Napa, CA
       </Typography>
 
-      <Typography>
-        <Box>
-          <p>
-            Technologies:
-            <br />
-            Javascript | Python | React | Redux | TypeScript | Next.js | Node.js
-            <br />
-            Express | MongoDB | MySQL | Git | Heroku | AWS
-          </p>
-        </Box>
-      </Typography>
+      <Box className={classes.content}>
+        <Typography>
+          Technologies:
+          <br />
+          Javascript | Python | React | Redux | TypeScript | Next.js | Node.js
+          <br />
+          Express | MongoDB | MySQL | Git | Heroku | AWS
+        </Typography>
+      </Box>
     </Container>
   );
 };
