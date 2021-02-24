@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import MyResume from '../components/Resume';
 
 const Resume = () => {
   return (
@@ -10,7 +11,7 @@ const Resume = () => {
       </Head>
 
       <main>
-        <h1>Resume</h1>
+        <MyResume />
       </main>
     </div>
   );
