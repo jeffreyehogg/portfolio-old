@@ -7,7 +7,6 @@ import { Box, Container, Typography, makeStyles } from '@material-ui/core';
 const useStyles = makeStyles(() => ({
   img: {
     borderRadius: '50%',
-    // boxShadow: '0 0 8px 8px black',
   },
   imgWrapper: {
     marginTop: '4rem',
@@ -32,8 +31,8 @@ const Profile = () => {
         <Image
           src="/images/me.jpg"
           alt="Picture of Jeff"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           className={classes.img}
         />
       </div>
