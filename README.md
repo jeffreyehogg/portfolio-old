@@ -2,7 +2,7 @@
 
 ## Introduction
 
-A portfolio built with React and Next.js. Deployed with AWS Amplify. Check out some examples of projects I've worked on and contact me.
+A portfolio built with React and Next.js. Deployed with Vercel. Check out some examples of projects I've worked on and contact me.
 
 ## Technologies
 
@@ -15,6 +15,6 @@ A portfolio built with React and Next.js. Deployed with AWS Amplify. Check out s
 
 [Portfolio Website](https://www.jeffehogg.com)
 
-[GitHub Repo](https://github.com/jeffhogg86/next-portfolio)
+[GitHub Repo](https://github.com/jeffhogg86/portfolio)
 
 <!-- ![Screenshot](src/assets/portfolio-ss.png) -->
