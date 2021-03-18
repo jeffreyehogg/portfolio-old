@@ -47,11 +47,20 @@ const Profile = () => {
 
       <Box className={classes.content}>
         <Typography>
-          Technologies:
+          Aspiring Full-stack Web Developer with a background in broadcast
+          communications. While attending UC Berkeley’s Full-stack Web
+          Development program, I gained hands-on experience developing and
+          deploying web applications, manipulating data, and solving algorithms.
           <br />
-          Javascript | Python | React | Redux | TypeScript | Next.js | Node.js
+        </Typography>
+        <Typography className={classes.content}>
+          Languages​: ​JavaScript, Python
           <br />
-          Express | MongoDB | MySQL | Git | Heroku | AWS
+          Front-end​: ​React, Nextjs, Redux, TypeScript
+          <br />
+          Backend: Express, Node.js Django
+          <br />
+          Databases​: ​MongoDB, MySQL
         </Typography>
       </Box>
     </Container>
