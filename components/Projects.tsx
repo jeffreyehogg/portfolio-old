@@ -40,6 +40,35 @@ export default function Portfolio() {
         <Grid container spacing={6}>
           <Grid item lg={6}>
             <Container className={classes.text}>
+              <h2>CodeTech TV</h2>
+              <p>
+                A next.js built react web application. Using the YouTube API and
+                a video player, this app presents the user with free coding
+                videos and tutorials.
+              </p>
+              <a
+                className={classes.link}
+                href="https://github.com/jeffhogg86/codetechtv"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Source Code
+              </a>
+            </Container>
+            <a href="http://codetechtv.com/" target="_blank" rel="noreferrer">
+              <div className={classes.imgWrap}>
+                <Image
+                  className={classes.img}
+                  src="/images/codetech.png"
+                  alt={'CodeTech Screenshot'}
+                  width="800"
+                  height="450"
+                />
+              </div>
+            </a>
+          </Grid>
+          <Grid item lg={6}>
+            <Container className={classes.text}>
               <h2>Iron Dojo</h2>
               <p>
                 A react based web application built to track your strength and
@@ -48,11 +77,11 @@ export default function Portfolio() {
               </p>
               <a
                 className={classes.link}
-                href="https://iron-dojo.herokuapp.com/"
+                href="https://github.com/jeffhogg86/Iron-Dojo"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://iron-dojo.herokuapp.com/
+                Source Code
               </a>
             </Container>
             <a
@@ -81,11 +110,11 @@ export default function Portfolio() {
               </p>
               <a
                 className={classes.link}
-                href="https://netflix-clone-23b92.web.app/"
+                href="https://github.com/jeffhogg86/shoflix"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://netflix-clone-23b92.web.app/
+                Source Code
               </a>
             </Container>
 
@@ -115,11 +144,11 @@ export default function Portfolio() {
               </p>
               <a
                 className={classes.link}
-                href="https://discord-47ed9.web.app/"
+                href="https://github.com/jeffhogg86/chatter"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://discord-47ed9.web.app/
+                Source Code
               </a>
             </Container>
             <a
@@ -148,11 +177,11 @@ export default function Portfolio() {
               </p>
               <a
                 className={classes.link}
-                href="https://bhagatabhijeet.github.io/tkrsearch/index.html"
+                href="https://github.com/jeffhogg86/tkrsearch"
                 target="_blank"
                 rel="noreferrer"
               >
-                https://bhagatabhijeet.github.io/tkrsearch/index.html
+                Source Code
               </a>
             </Container>
             <a
