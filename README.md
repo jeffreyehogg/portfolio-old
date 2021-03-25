@@ -17,4 +17,4 @@ A portfolio built with React and Next.js. Deployed with Vercel. Check out some e
 
 [GitHub Repo](https://github.com/jeffhogg86/portfolio)
 
-<!-- ![Screenshot](src/assets/portfolio-ss.png) -->
+![Screenshot](/public/images/portfolio-ss.png)
