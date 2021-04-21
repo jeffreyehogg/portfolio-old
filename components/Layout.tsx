@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
 import Navbar from './Navbar';
-import styles from '../styles/Layout.module.css';
 
 type Props = {
   children?: ReactNode;
@@ -9,7 +8,7 @@ type Props = {
 };
 
 const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
-  <div className={styles.bgContainer}>
+  <div>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
