@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Profile from '../components/Profile';
+import AboutMe from '../components/AboutMe';
 
 const About = () => {
   return (
@@ -11,7 +11,7 @@ const About = () => {
       </Head>
 
       <main>
-        <Profile />
+        <AboutMe />
       </main>
     </div>
   );
