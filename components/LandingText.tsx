@@ -7,7 +7,7 @@ export default class MyComponent extends Component {
       <Typist>
         <span>I'm Jeff Hogg</span>
         <br />
-        <span className="text-indigo-200">a Full-stack web developer</span>
+        <span className="text-indigo-200">a Fullstack web developer</span>
       </Typist>
     );
   }

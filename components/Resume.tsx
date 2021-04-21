@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 export default function Resume() {
   return (
     <div className="relative py-16 bg-white overflow-hidden">
@@ -130,7 +128,7 @@ export default function Resume() {
           {/* Summary */}
           <h1 className="mt-8 font-semibold">Summary</h1>
           <p className="mt-6 text-xl text-gray-500 leading-8">
-            Full-stack developer with a background in broadcasting. Experienced
+            Fullstack developer with a background in broadcasting. Experienced
             with developing and deploying web applications, manipulating data,
             and solving algorithms. I have a passion for problem-solving and a
             demonstrated history of teamwork, collaboration and communication
@@ -213,7 +211,7 @@ export default function Resume() {
           <h1 className="mt-8 font-semibold">Education</h1>
 
           <p className="prose prose-indigo mt-6 text-xl text-gray-500 leading-8">
-            University of California, Berkeley - Certificate, Full-stack Web
+            University of California, Berkeley - Certificate, Fullstack Web
             Development
           </p>
           <p className="prose prose-indigo mt-2 text-xl text-gray-500 leading-8">

@@ -1,7 +1,7 @@
 const people = [
   {
     name: 'Jeff Hogg',
-    role: 'Full-stack Developer',
+    role: 'Fullstack Developer',
     imageUrl: '/images/me.jpg',
     bio:
       'Languages​: ​JavaScript, Python\n Front-end​: ​React, Nextjs, TypeScript, Redux\n Backend: Express, Node.js Django\n Databases​: ​MongoDB, MySQL',
@@ -20,8 +20,8 @@ export default function Example() {
               About Me
             </h2>
             <p className="text-xl text-gray-500">
-              Aspiring Full-stack Web Developer with a background in broadcast
-              communications. While attending UC Berkeley’s Full-stack Web
+              Aspiring Fullstack Web Developer with a background in broadcast
+              communications. While attending UC Berkeley’s Fullstack Web
               Development program, I gained hands-on experience developing and
               deploying web applications, manipulating data, and solving
               algorithms.
