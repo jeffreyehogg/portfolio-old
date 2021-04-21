@@ -5,7 +5,7 @@ export default class MyComponent extends Component {
   render() {
     return (
       <Typist>
-        <span>Hey, I'm Jeff Hogg</span>
+        <span className="text-blue-600">Hey, I'm Jeff Hogg</span>
         <br />
         <span>a full-stack web developer</span>
       </Typist>

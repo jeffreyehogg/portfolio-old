@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import NavBar from './NavBar';
+import Navbar from './Navbar';
 import styles from '../styles/Layout.module.css';
 
 type Props = {
@@ -26,7 +26,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
         content="https://jeffehogg.com/images/portfolio-ss.png"
       />
     </Head>
-    <NavBar />
+    <Navbar />
     {children}
   </div>
 );

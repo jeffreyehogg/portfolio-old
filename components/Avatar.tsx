@@ -1,28 +1,12 @@
-import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Avatar, makeStyles } from '@material-ui/core';
-
-const useStyles = makeStyles(() => ({
-  avatar: {
-    transition: 'transform 200ms',
-    '&:hover': {
-      transform: 'scale(1.09)',
-      opacity: 0.7,
-    },
-    cursor: 'pointer',
-  },
-}));
-const MyAvatar = () => {
-  const classes = useStyles();
-
+function Avatar() {
   return (
-    <Link href="/" passHref>
-      <Avatar className={classes.avatar} alt="Jeff Hogg">
-        <Image src="/images/me.jpg" width={250} height={250} />
-      </Avatar>
-    </Link>
+    <img
+      className="h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110"
+      loading="lazy"
+      src={'https://avatars.githubusercontent.com/jeffhogg86'}
+      alt="profile pic"
+    />
   );
-};
+}
 
-export default MyAvatar;
+export default Avatar;

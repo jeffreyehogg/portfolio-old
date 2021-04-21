@@ -1,119 +1,171 @@
-import React from 'react';
-import Link from 'next/link';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import {
-  AppBar,
-  Toolbar,
-  Button,
-  IconButton,
-  MenuItem,
-  Menu,
-  Hidden,
-} from '@material-ui/core';
-import { Menu as MenuIcon } from '@material-ui/icons';
-import MyAvatar from './Avatar';
-import Social from './Social';
+/* This example requires Tailwind CSS v2.0+ */
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import Avatar from './Avatar';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      flexGrow: 1,
-    },
-    menuButton: {
-      marginRight: theme.spacing(2),
-    },
-    button: {
-      marginLeft: '2rem',
-    },
-    avatar: {
-      marginRight: '2rem',
-    },
-  })
-);
+const navigation = [
+  { name: 'About', href: '/about', current: false },
+  { name: 'Projects', href: '/projects', current: false },
+  { name: 'Resume', href: '/resume', current: false },
+  { name: 'Contact', href: '/contact', current: false },
+];
 
-export default function MenuAppBar() {
-  const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+function classNames(...classes: string[]): string {
+  return classes.filter(Boolean).join(' ');
+}
 
-  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
+export default function Navbar() {
   return (
-    <div className={classes.root}>
-      <AppBar position="static" color="transparent">
-        <Toolbar>
-          <Hidden only={['xs', 'sm']}>
-            <div className={classes.root}>
-              <Link href="/about" passHref>
-                <Button className={classes.button} color="inherit">
-                  About
-                </Button>
-              </Link>
-              <Link href="/portfolio" passHref>
-                <Button className={classes.button} color="inherit">
-                  Portfolio
-                </Button>
-              </Link>
-              <Link href="/resume" passHref>
-                <Button className={classes.button} color="inherit">
-                  Resume
-                </Button>
-              </Link>
-            </div>
-          </Hidden>
-          <Hidden only={['md', 'lg', 'xl']}>
-            <div className={classes.root}>
-              <IconButton
-                aria-controls="menu"
-                aria-haspopup="true"
-                onClick={handleMenu}
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-            </div>
-          </Hidden>
+    <Disclosure as="nav" className="bg-gray-900">
+      {({ open }) => (
+        <>
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between h-16">
+              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <Disclosure.Button className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <MenuIcon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </Disclosure.Button>
+              </div>
+              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
+                <div className="flex-shrink-0 flex items-center">
+                  <p className="text-gray-300  hover:text-white text-lg font-medium">
+                    Jeff Hogg
+                  </p>
+                </div>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
+                    {navigation.map(item => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          item.current
+                            ? 'bg-gray-900 text-white'
+                            : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          'px-3 py-2 rounded-md text-sm font-medium'
+                        )}
+                        aria-current={item.current ? 'page' : undefined}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                {/* ADD ICONS */}
 
-          <Menu
-            id="menu-appbar"
-            anchorEl={anchorEl}
-            anchorOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            keepMounted
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right',
-            }}
-            open={open}
-            onClose={handleClose}
-          >
-            <Link href="/about" passHref>
-              <MenuItem onClick={handleClose}>About</MenuItem>
-            </Link>
-            <Link href="/portfolio" passHref>
-              <MenuItem onClick={handleClose}>Portfolio</MenuItem>
-            </Link>
-            <Link href="/resume" passHref>
-              <MenuItem onClick={handleClose}>Resume</MenuItem>
-            </Link>
-          </Menu>
-          <div>
-            <Social />
+                {/* <button className="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
+                  <span className="sr-only">View notifications</span>
+                  <BellIcon className="h-6 w-6" aria-hidden="true" />
+                </button> */}
+
+                {/* Profile dropdown */}
+                <Menu as="div" className="ml-3 relative">
+                  {({ open }) => (
+                    <>
+                      <div>
+                        <Menu.Button className="bg-gray-800 flex text-sm rounded-full focus:outline-none ">
+                          <span className="sr-only">Open user menu</span>
+                          <Avatar />
+                        </Menu.Button>
+                      </div>
+                      <Transition
+                        show={open}
+                        as={Fragment}
+                        enter="transition ease-out duration-100"
+                        enterFrom="transform opacity-0 scale-95"
+                        enterTo="transform opacity-100 scale-100"
+                        leave="transition ease-in duration-75"
+                        leaveFrom="transform opacity-100 scale-100"
+                        leaveTo="transform opacity-0 scale-95"
+                      >
+                        <Menu.Items
+                          static
+                          className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        >
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="http://www.linkedin.com/in/jeffhogg/"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={classNames(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
+                                )}
+                              >
+                                LinkedIn
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="http://github.com/jeffhogg86"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={classNames(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
+                                )}
+                              >
+                                Github
+                              </a>
+                            )}
+                          </Menu.Item>
+                          <Menu.Item>
+                            {({ active }) => (
+                              <a
+                                href="mailto:jeffhogg86@gmail.com"
+                                target="_blank"
+                                rel="noreferrer"
+                                className={classNames(
+                                  active ? 'bg-gray-100' : '',
+                                  'block px-4 py-2 text-sm text-gray-700'
+                                )}
+                              >
+                                Email
+                              </a>
+                            )}
+                          </Menu.Item>
+                        </Menu.Items>
+                      </Transition>
+                    </>
+                  )}
+                </Menu>
+              </div>
+            </div>
           </div>
-          <div className={classes.avatar}>
-            <MyAvatar />
-          </div>
-        </Toolbar>
-      </AppBar>
-    </div>
+
+          <Disclosure.Panel className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              {navigation.map(item => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={classNames(
+                    item.current
+                      ? 'bg-gray-900 text-white'
+                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-medium'
+                  )}
+                  aria-current={item.current ? 'page' : undefined}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </Disclosure.Panel>
+        </>
+      )}
+    </Disclosure>
   );
 }
