@@ -7,8 +7,8 @@ import Avatar from './Avatar';
 const navigation = [
   { name: 'About', href: '/about', current: false },
   { name: 'Projects', href: '/projects', current: false },
-  { name: 'Resume', href: '/resume', current: false },
   { name: 'Contact', href: '/contact', current: false },
+  { name: 'Resume', href: '/resume', current: false },
 ];
 
 function classNames(...classes: string[]): string {
@@ -17,7 +17,7 @@ function classNames(...classes: string[]): string {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-space mb-10">
+    <Disclosure as="nav" className="bg-space">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -92,7 +92,7 @@ export default function Navbar() {
                       >
                         <Menu.Items
                           static
-                          className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                          className=" z-10 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                         >
                           <Menu.Item>
                             {({ active }) => (

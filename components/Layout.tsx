@@ -16,7 +16,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       <meta property="og:title" content={title} />
       <meta
         property="og:description"
-        content="A Portfolio Website for displaying applications I have built"
+        content="A personal portfolio Website. Built with Next.js and Tailwind"
       />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://jeffehogg.com/" />
