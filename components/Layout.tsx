@@ -22,7 +22,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       <meta property="og:url" content="https://jeffehogg.com/" />
       <meta
         property="og:image"
-        content="https://jeffehogg.com/images/portfolio-ss.png"
+        content="https://jeffehogg.com/images/homepage.png"
       />
     </Head>
     <Navbar />
