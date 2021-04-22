@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 const projects = [
   {
     title: 'CodeTech TV',
@@ -61,7 +60,7 @@ export default function ProjectList() {
           {projects.map(post => (
             <div
               key={post.title}
-              className="flex flex-col rounded-lg shadow-lg overflow-hidden"
+              className="flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer transition duration-150 transform hover:scale-110"
             >
               <div className="flex-shrink-0">
                 <a href={post.href} target="_blank" rel="noreferrer">

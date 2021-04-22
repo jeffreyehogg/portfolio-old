@@ -1,10 +1,5 @@
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline';
 
-// const submitHandler = (e: React.ChangeEvent<HTMLInputElement> ) => {
-//   e.preventDefault();
-//   console.log('hello');
-// };
-
 export default function Example() {
   return (
     <div className="relative bg-white">

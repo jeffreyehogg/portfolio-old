@@ -10,10 +10,10 @@ const people = [
   },
 ];
 
-export default function Example() {
+export default function AboutMe() {
   return (
     <div className="bg-white">
-      <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
+      <div className="mx-auto min-h-screen bg-white flex flex-col justify-center py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
         <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
           <div className="space-y-2 sm:space-y-4">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">

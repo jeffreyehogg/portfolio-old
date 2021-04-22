@@ -2,7 +2,7 @@ import LandingText from './Typist';
 
 export default function Hero() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white flex flex-col justify-center">
       <div>
         {/* Hero card */}
         <div className="relative">
