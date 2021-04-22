@@ -109,10 +109,12 @@ export default function Resume() {
           {/* Title */}
 
           <h1 className="flex-grow">
-            <span className="flex mb-1 text-3xl sm:text-4xl text-indigo-600 font-semibold tracking-wide uppercase">
+            <span className="flex mb-4 text-3xl sm:text-4xl text-indigo-600 font-semibold tracking-wide uppercase">
               Jeff Hogg
             </span>
-            <span className="prose-indigo prose text-base text-center leading-8 tracking-tight text-gray-900 ">
+          </h1>
+          <p>
+            <span className="prose-indigo prose text-base text-center tracking-tight text-gray-900 ">
               Napa, CA <br />
               707-287-2123 <br />
               <a
@@ -123,7 +125,7 @@ export default function Resume() {
                 Jeffhogg86@gmail.com
               </a>
             </span>
-          </h1>
+          </p>
 
           {/* Summary */}
           <h1 className="mt-8 font-semibold">Summary</h1>
@@ -170,7 +172,7 @@ export default function Resume() {
 
           {/* Experience */}
           <h1 className="mt-8 font-semibold">Experience</h1>
-          <p className="prose prose-indigo mt-6 text-xl text-gray-500 leading-8">
+          <div className="prose prose-indigo mt-6 text-xl text-gray-500 leading-8">
             <a href="https://www.cisco.com/" target="_blank" rel="noreferrer">
               Cisco
             </a>{' '}
@@ -184,9 +186,9 @@ export default function Resume() {
                 broadcasts.
               </li>
             </ul>
-          </p>
+          </div>
 
-          <p className="prose prose-indigo mt-6 text-xl text-gray-500 leading-8">
+          <div className="prose prose-indigo mt-6 text-xl text-gray-500 leading-8">
             <a
               href="https://www.bafaia119.com/"
               target="_blank"
@@ -205,7 +207,7 @@ export default function Resume() {
                 and the World Series.
               </li>
             </ul>
-          </p>
+          </div>
 
           {/* Education */}
           <h1 className="mt-8 font-semibold">Education</h1>
