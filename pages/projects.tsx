@@ -1,12 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
-import Projects from '../components/Projects';
+import ProjectList from '../components/ProjectList';
 
-const Portfolio = () => {
+const Projects = () => {
   return (
     <div>
       <Head>
-        <title>Portfolio</title>
+        <title>Projects</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -17,4 +17,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default ProjectList;
