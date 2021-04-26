@@ -17,4 +17,4 @@ A portfolio built with React and Next.js. Deployed with AWS Amplify. Check out s
 
 [GitHub Repo](https://github.com/jeffhogg86/next-portfolio)
 
-![Screenshot](/public/images/portfolio-ss.png)
+![Screenshot](/public/images/homepage.png)
