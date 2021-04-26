@@ -15,6 +15,15 @@ const projects = [
 
     imageUrl: '/images/ironDojo-ss.png',
   },
+
+  {
+    title: 'Chatter',
+    href: 'https://discord-47ed9.web.app/',
+    description:
+      'A Discord style chat app built with react. Demonstrates basic chat functionality, creating a channel and sending messages. Implements Google Oauth for login.',
+
+    imageUrl: '/images/chatter.png',
+  },
   {
     title: 'Shoflix',
     href: 'https://netflix-clone-23b92.web.app/',
@@ -24,12 +33,12 @@ const projects = [
     imageUrl: '/images/shoflix.png',
   },
   {
-    title: 'Chatter',
-    href: 'https://discord-47ed9.web.app/',
+    title: 'Hoggle Search',
+    href: 'https://hoggle-search.vercel.app/',
     description:
-      'A Discord style chat app built with react. Demonstrates basic chat functionality, creating a channel and sending messages. Implements Google Oauth for login.',
+      'A Google type search engine built with Next.js, Tailwind and the Google Search Api. Deployed with vercel.',
 
-    imageUrl: '/images/chatter.png',
+    imageUrl: '/images/hoggle.png',
   },
   {
     title: 'tkrSearch',
