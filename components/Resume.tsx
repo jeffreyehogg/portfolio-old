@@ -130,7 +130,7 @@ export default function Resume() {
           {/* Summary */}
           <h1 className="mt-8 font-semibold">Summary</h1>
           <p className="mt-6 text-xl text-gray-500 leading-8">
-            Fullstack developer with a background in broadcasting. Experienced
+            Full-stack developer with a background in broadcasting. Experienced
             with developing and deploying web applications, manipulating data,
             and solving algorithms. I have a passion for problem-solving and a
             demonstrated history of teamwork, collaboration and communication
