@@ -5,7 +5,7 @@ const projects = [
     description:
       'A next.js built react web application. Using the YouTube API and a video player, this app presents the user with free coding videos and tutorials.',
 
-    imageUrl: '/images/codetech.png',
+    imageUrl: '/images/codetechtv.png',
   },
   {
     title: 'Iron Dojo',
