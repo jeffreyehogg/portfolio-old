@@ -13,11 +13,7 @@ export default function Hero() {
                 <img
                   className="h-full w-full object-cover"
                   src="/images/space.jpg"
-                  alt="People working on laptops"
-                />
-                <div
-                  className="absolute inset-0"
-                  style={{ mixBlendMode: 'multiply' }}
+                  alt="space"
                 />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">

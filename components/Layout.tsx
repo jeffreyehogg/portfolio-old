@@ -26,6 +26,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       />
     </Head>
     <Navbar />
+
     {children}
   </div>
 );
