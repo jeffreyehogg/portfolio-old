@@ -1,6 +1,4 @@
-import { MailIcon } from '@heroicons/react/outline';
-
-export default function Example() {
+export default function ContactForm() {
   return (
     <div className="relative bg-white">
       <div className="absolute inset-0">
