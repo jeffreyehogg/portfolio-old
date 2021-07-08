@@ -1,11 +1,11 @@
 const projects = [
   {
-    title: 'CodeTech TV',
-    href: 'http://codetechtv.com/',
+    title: 'Hogg Media',
+    href: 'https://hoggmedia.com/',
     description:
-      'A next.js built react web application. Using the YouTube API and a video player, this app presents the user with free coding videos and tutorials.',
+      'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown',
 
-    imageUrl: '/images/codetechtv.png',
+    imageUrl: '/images/hoggmedia.png',
   },
   {
     title: 'Iron Dojo',
@@ -48,51 +48,51 @@ const projects = [
 
     imageUrl: '/images/tkrSearch-ss.png',
   },
-];
+]
 
 export default function ProjectList() {
   return (
-    <div className="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
-      <div className="absolute inset-0">
-        <div className="bg-white h-1/3 sm:h-2/3" />
+    <div className='relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8'>
+      <div className='absolute inset-0'>
+        <div className='bg-white h-1/3 sm:h-2/3' />
       </div>
-      <div className="relative max-w-7xl mx-auto">
-        <div className="text-center">
-          <h2 className="text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl">
+      <div className='relative max-w-7xl mx-auto'>
+        <div className='text-center'>
+          <h2 className='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl'>
             Projects
           </h2>
-          <p className="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
+          <p className='mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4'>
             Check out some of the applications and websites I have built below.
           </p>
         </div>
-        <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          {projects.map(post => (
+        <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
+          {projects.map((post) => (
             <div
               key={post.title}
-              className="flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer transition duration-150 transform hover:scale-110"
+              className='flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer transition duration-150 transform hover:scale-110'
             >
-              <div className="flex-shrink-0">
-                <a href={post.href} target="_blank" rel="noreferrer">
+              <div className='flex-shrink-0'>
+                <a href={post.href} target='_blank' rel='noreferrer'>
                   <img
-                    className="h-48 w-full object-cover"
+                    className='h-48 w-full object-cover'
                     src={post.imageUrl}
-                    alt=""
+                    alt=''
                   />
                 </a>
               </div>
-              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-indigo-600"></p>
+              <div className='flex-1 bg-white p-6 flex flex-col justify-between'>
+                <div className='flex-1'>
+                  <p className='text-sm font-medium text-indigo-600'></p>
                   <a
                     href={post.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block mt-2"
+                    target='_blank'
+                    rel='noreferrer'
+                    className='block mt-2'
                   >
-                    <p className="text-xl font-semibold text-gray-900">
+                    <p className='text-xl font-semibold text-gray-900'>
                       {post.title}
                     </p>
-                    <p className="mt-3 text-base text-gray-500">
+                    <p className='mt-3 text-base text-gray-500'>
                       {post.description}
                     </p>
                   </a>
@@ -103,5 +103,5 @@ export default function ProjectList() {
         </div>
       </div>
     </div>
-  );
+  )
 }
