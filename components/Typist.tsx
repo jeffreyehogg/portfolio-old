@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import Typist from 'react-typist';
+import React, { Component } from 'react'
+import Typist from 'react-typist'
 
 export default class MyComponent extends Component {
   render() {
@@ -7,10 +7,8 @@ export default class MyComponent extends Component {
       <Typist>
         <span>I'm Jeff Hogg</span>
         <br />
-        <span className="text-indigo-200">
-          Web developer | Broadcast professional
-        </span>
+        <span className='text-indigo-200'>Full-stack web developer</span>
       </Typist>
-    );
+    )
   }
 }
