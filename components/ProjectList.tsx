@@ -1,9 +1,17 @@
 const projects = [
   {
+    title: 'CardShop',
+    href: 'https://cardshop.vercel.app',
+    description:
+      'An online marketplace for sportscards. Built with Next.js and Redux. When complete, user will be able to create an account, add items to shopping cart and checkout with PayPal.',
+
+    imageUrl: '/images/cardshop.png',
+  },
+  {
     title: 'Hogg Media',
     href: 'https://hoggmedia.com/',
     description:
-      'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown',
+      'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown.',
 
     imageUrl: '/images/hoggmedia.png',
   },
@@ -39,14 +47,6 @@ const projects = [
       'A Google type search engine built with Next.js, Tailwind and the Google Search Api. Deployed with vercel.',
 
     imageUrl: '/images/hoggle.png',
-  },
-  {
-    title: 'tkrSearch',
-    href: 'https://bhagatabhijeet.github.io/tkrsearch/index.html',
-    description:
-      'tkrSearch is a simple stock and cryptocurrency search application. The user can search by ticker symbols and is presented with useful information for that stock or crypto.',
-
-    imageUrl: '/images/tkrSearch-ss.png',
   },
 ]
 

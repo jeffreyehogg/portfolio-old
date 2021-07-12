@@ -5,8 +5,6 @@ export default class MyComponent extends Component {
   render() {
     return (
       <Typist>
-        <span>I'm Jeff Hogg</span>
-        <br />
         <span className='text-indigo-200'>Full-stack web developer</span>
       </Typist>
     )
