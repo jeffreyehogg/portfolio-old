@@ -1,18 +1,14 @@
-import Head from 'next/head';
-import ContactForm from '../components/ContactForm';
+import ContactForm from '../components/ContactForm'
+import Layout from '../components/Layout'
 
 function contact() {
   return (
-    <div>
-      <Head>
-        <title>Contact</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout title='Contact'>
       <main>
         <ContactForm />
       </main>
-    </div>
-  );
+    </Layout>
+  )
 }
 
-export default contact;
+export default contact

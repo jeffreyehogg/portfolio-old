@@ -1,16 +1,13 @@
-import Head from 'next/head';
-import Hero from '../components/Hero';
+import Head from 'next/head'
+import Hero from '../components/Hero'
+import Layout from '../components/Layout'
 
 export default function Home() {
   return (
-    <div>
-      <Head>
-        <title>Jeff Hogg</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Layout title='Jeff Hogg'>
       <main>
         <Hero />
       </main>
-    </div>
-  );
+    </Layout>
+  )
 }

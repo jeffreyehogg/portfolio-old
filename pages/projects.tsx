@@ -1,20 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import ProjectList from '../components/ProjectList';
+import React from 'react'
+import Layout from '../components/Layout'
+import ProjectList from '../components/ProjectList'
 
 const Projects = () => {
   return (
-    <div>
-      <Head>
-        <title>Projects</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title='Projects'>
       <main>
-        <Projects />
+        <ProjectList />
       </main>
-    </div>
-  );
-};
+    </Layout>
+  )
+}
 
-export default ProjectList;
+export default Projects

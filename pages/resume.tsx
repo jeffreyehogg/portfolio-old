@@ -1,20 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import MyResume from '../components/Resume';
+import React from 'react'
+import Layout from '../components/Layout'
+import MyResume from '../components/Resume'
 
 const Resume = () => {
   return (
-    <div>
-      <Head>
-        <title>Resume</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title='Resume'>
       <main>
         <MyResume />
       </main>
-    </div>
-  );
-};
+    </Layout>
+  )
+}
 
-export default Resume;
+export default Resume

@@ -1,20 +1,15 @@
-import React from 'react';
-import Head from 'next/head';
-import AboutMe from '../components/AboutMe';
+import React from 'react'
+import AboutMe from '../components/AboutMe'
+import Layout from '../components/Layout'
 
 const About = () => {
   return (
-    <div>
-      <Head>
-        <title>About</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout title='About Me'>
       <main>
         <AboutMe />
       </main>
-    </div>
-  );
-};
+    </Layout>
+  )
+}
 
-export default About;
+export default About

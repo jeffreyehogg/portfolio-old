@@ -2,7 +2,7 @@ import Typist from './Typist'
 
 export default function Hero() {
   return (
-    <div className='min-h-screen bg-white flex flex-col justify-center'>
+    <div className='bg-white my-16 flex flex-col justify-center'>
       <div>
         {/* Hero card */}
         <div className='relative'>

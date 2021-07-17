@@ -9,7 +9,6 @@ A portfolio built with React and Next.js. Deployed with Vercel. Check out some e
 - JavaScript
 - Next.js
 - React
-- AWS
 
 ## Deployed
 

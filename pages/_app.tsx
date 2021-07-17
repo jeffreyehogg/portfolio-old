@@ -1,13 +1,8 @@
-import React from 'react';
-import Layout from '../components/Layout';
-import '../styles/globals.css';
+import React from 'react'
+import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }: any) {
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp
