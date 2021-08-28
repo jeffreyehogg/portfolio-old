@@ -23,7 +23,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       <meta property='og:url' content='https://jeffehogg.com/' />
       <meta
         property='og:image'
-        content='https://jeffehogg.com/images/homepage.png'
+        content='https://jeffehogg.com/images/portfolio.png'
       />
       <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
     </Head>
