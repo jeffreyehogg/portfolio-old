@@ -6,8 +6,8 @@ import Avatar from './Avatar'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
+  { name: 'Portfolio', href: '/portfolio', current: false },
   { name: 'About', href: '/about', current: false },
-  { name: 'Projects', href: '/projects', current: false },
   { name: 'Contact', href: '/contact', current: false },
   // { name: 'Resume', href: '/resume', current: false },
 ]

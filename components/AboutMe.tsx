@@ -3,7 +3,7 @@ const people = [
     name: 'Jeff Hogg',
     role: 'Fullstack Developer',
     imageUrl: '/images/me.jpg',
-    bio: 'Languages​: ​JavaScript, Python\n Front-end​: ​React, Nextjs, TypeScript, Redux\n Backend: Express, Node.js Django\n Databases​: ​MongoDB, MySQL',
+    bio: 'Languages​: ​JavaScript, TypeScript\n Frontend​: ​React, Nextjs\n Backend: Express, Node.js, Strapi\n Databases​: ​MongoDB, MySQL',
     githubUrl: 'http://github.com/jeffhogg86',
     linkedinUrl: 'http://www.linkedin.com/in/jeffhogg/',
   },
@@ -19,7 +19,12 @@ export default function AboutMe() {
               About Me
             </h2>
             <p className='text-xl text-gray-500'>
-              I'm a software engineer based in the San Francisco Bay Area.
+              I'm a Full Stack Developer based in the San Francisco Bay Area. I
+              have a passion for building web applications and I'm always
+              looking to learn new technologies. I have experience with modern
+              frontend frameworks, server-side rendering, search-engine
+              optimization, database schemas, user authentication, and more. I
+              am happy to connect on LinkedIn, Github, or Twitter.
             </p>
           </div>
           <div className='lg:col-span-2'>

@@ -20,8 +20,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className='mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl'>
-            Check out my personal portfolio website to see what I've been
-            working on.
+            Check out my portfolio website to see what I've been working on.
             <br />
             Feel free to reach out!
           </p>
@@ -34,10 +33,10 @@ export default function Hero() {
                 Contact
               </a>
               <a
-                href='/projects'
+                href='/portfolio'
                 className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-700  hover:bg-opacity-70 sm:px-8'
               >
-                Projects
+                Portfolio
               </a>
             </div>
           </div>

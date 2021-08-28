@@ -2,14 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import ProjectList from '../components/ProjectList'
 
-const Projects = () => {
+const Portfolio = () => {
   return (
-    <Layout title='Projects'>
-      <main>
-        <ProjectList />
-      </main>
+    <Layout title='Portfolio'>
+      <ProjectList />
     </Layout>
   )
 }
 
-export default Projects
+export default Portfolio
