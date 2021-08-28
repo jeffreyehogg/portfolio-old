@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
-  <div>
+  <div className='flex flex-col h-screen'>
     <Head>
       <meta charSet='utf-8' />
       <meta name='viewport' content='initial-scale=1.0, width=device-width' />
@@ -27,7 +27,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
     </Head>
     <Navbar />
-    {children}
+    <main className='flex-1'>{children}</main>
     <Footer />
   </div>
 )

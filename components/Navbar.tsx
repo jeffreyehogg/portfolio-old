@@ -120,7 +120,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href='mailto:jeffhogg86@gmail.com'
+                                href='https://twitter.com/JeffeHogg'
                                 target='_blank'
                                 rel='noreferrer'
                                 className={classNames(
@@ -128,7 +128,7 @@ export default function Navbar() {
                                   'block px-4 py-2 text-sm text-gray-700'
                                 )}
                               >
-                                Email
+                                Twitter
                               </a>
                             )}
                           </Menu.Item>

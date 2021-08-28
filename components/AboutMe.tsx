@@ -19,11 +19,7 @@ export default function AboutMe() {
               About Me
             </h2>
             <p className='text-xl text-gray-500'>
-              Aspiring Web Developer with a background in broadcast
-              communications. While attending UC Berkeley’s Fullstack Web
-              Development program, I gained hands-on experience developing and
-              deploying web applications, manipulating data, and solving
-              algorithms.
+              I'm a software engineer based in the San Francisco Bay Area.
             </p>
           </div>
           <div className='lg:col-span-2'>
