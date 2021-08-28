@@ -57,14 +57,12 @@ export default function ProjectList() {
         <div className='bg-white h-1/3 sm:h-2/3' />
       </div>
       <div className='relative max-w-7xl mx-auto'>
-        <div className='text-center'>
-          <h2 className='text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl'>
-            Portfolio
-          </h2>
-          <p className='mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4'>
-            Check out some of the applications and websites I have built.
-          </p>
-        </div>
+        <h2 className='text-3xl font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl'>
+          Portfolio
+        </h2>
+        <p className='mt-6 max-w-2xl text-xl text-gray-500'>
+          Check out some projects I've worked on.
+        </p>
         <div className='mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none'>
           {projects.map((post) => (
             <div
