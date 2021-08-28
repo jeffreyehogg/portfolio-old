@@ -20,9 +20,9 @@ export default function Hero() {
             </span>
           </h1>
           <p className='mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl'>
-            Check out my portfolio website to see what I've been working on.
+            Check out my portfolio to see what I've been working on.
             <br />
-            Feel free to reach out!
+            Now providing freelance web development services.
           </p>
           <div className='mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center'>
             <div className='space-y-4 sm:space-y-0 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5'>
