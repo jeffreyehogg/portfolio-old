@@ -1,4 +1,34 @@
+import { useState } from 'react'
+
 export default function ContactForm() {
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+  // const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // setSubmitted(true)
+    const data = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+      subject: subject,
+      message: message,
+    }
+    console.log(data)
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setPhone('')
+    setSubject('')
+    setMessage('')
+  }
+
   return (
     <div className='bg-gray-100'>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
@@ -131,7 +161,7 @@ export default function ContactForm() {
               >
                 <div>
                   <label
-                    htmlFor='first-name'
+                    htmlFor='firstName'
                     className='block text-sm font-medium text-gray-900'
                   >
                     First name
@@ -139,8 +169,12 @@ export default function ContactForm() {
                   <div className='mt-1'>
                     <input
                       type='text'
-                      name='first-name'
-                      id='first-name'
+                      name='firstName'
+                      value={firstName}
+                      onChange={(e) => {
+                        setFirstName(e.target.value)
+                      }}
+                      id='firstName'
                       autoComplete='given-name'
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
                     />
@@ -148,7 +182,7 @@ export default function ContactForm() {
                 </div>
                 <div>
                   <label
-                    htmlFor='last-name'
+                    htmlFor='lastName'
                     className='block text-sm font-medium text-gray-900'
                   >
                     Last name
@@ -156,8 +190,12 @@ export default function ContactForm() {
                   <div className='mt-1'>
                     <input
                       type='text'
-                      name='last-name'
-                      id='last-name'
+                      name='lastName'
+                      value={lastName}
+                      onChange={(e) => {
+                        setLastName(e.target.value)
+                      }}
+                      id='lastName'
                       autoComplete='family-name'
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
                     />
@@ -174,6 +212,10 @@ export default function ContactForm() {
                     <input
                       id='email'
                       name='email'
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value)
+                      }}
                       type='email'
                       autoComplete='email'
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
@@ -196,6 +238,10 @@ export default function ContactForm() {
                     <input
                       type='text'
                       name='phone'
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value)
+                      }}
                       id='phone'
                       autoComplete='tel'
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
@@ -214,6 +260,10 @@ export default function ContactForm() {
                     <input
                       type='text'
                       name='subject'
+                      value={subject}
+                      onChange={(e) => {
+                        setSubject(e.target.value)
+                      }}
                       id='subject'
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md'
                     />
@@ -235,16 +285,20 @@ export default function ContactForm() {
                     <textarea
                       id='message'
                       name='message'
+                      value={message}
+                      onChange={(e) => {
+                        setMessage(e.target.value)
+                      }}
                       rows={4}
                       className='py-3 px-4 block w-full shadow-sm text-gray-900 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md'
                       aria-describedby='message-max'
-                      defaultValue={''}
                     />
                   </div>
                 </div>
                 <div className='sm:col-span-2 sm:flex sm:justify-end'>
                   <button
                     type='submit'
+                    onClick={handleSubmit}
                     className='mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto'
                   >
                     Submit
