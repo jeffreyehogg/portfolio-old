@@ -44,21 +44,19 @@ const pricing = {
   ],
 }
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes: string[]) {
+//   return classes.filter(Boolean).join(' ')
+// }
 
-export default function Example() {
+export default function Services() {
   return (
     <div className='max-w-7xl mx-auto py-24 px-4 bg-white sm:px-6 lg:px-8'>
-      <h2 className='text-3xl font-extrabold text-gray-900 sm:text-5xl sm:leading-none sm:tracking-tight lg:text-6xl'>
-        Web Development Services
+      <h2 className='text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10'>
+        Services
       </h2>
       <p className='mt-6 max-w-2xl text-xl text-gray-500'>
         Choose a website option that fits your business needs.
       </p>
-
-      {/* Tiers */}
       <div className='mt-24 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8'>
         {pricing.tiers.map((tier) => (
           <div
