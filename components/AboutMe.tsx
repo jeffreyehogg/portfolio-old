@@ -3,7 +3,7 @@ const people = [
     name: 'Jeff Hogg',
     role: 'Fullstack Developer',
     imageUrl: '/images/me.jpg',
-    bio: 'Languages​: ​JavaScript, TypeScript\n Frontend​: ​React, Nextjs\n Backend: Express, Node.js, Strapi\n Databases​: ​MongoDB, MySQL',
+    bio: 'Languages​: ​JavaScript, TypeScript, Python\n Frontend​: ​React, Nextjs\n Backend: Express, Node.js, Django, Strapi\n Databases​: ​MongoDB, MySQL',
     githubUrl: 'http://github.com/jeffhogg86',
     linkedinUrl: 'http://www.linkedin.com/in/jeffhogg/',
   },

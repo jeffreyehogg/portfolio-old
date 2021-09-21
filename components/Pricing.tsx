@@ -16,7 +16,7 @@ const pricing = {
       title: 'Dynamic Website',
       price: 499,
       description:
-        'A step-up from the Standard. Choose this option if you have dynamic data that changes.',
+        'A step-up from the Standard. Choose this option if you have dynamic data that changes frequently.',
       features: [
         'Static + Dynamic Data',
         '3 revisions',
@@ -30,7 +30,7 @@ const pricing = {
       title: 'Premium Website',
       price: 999,
       description:
-        'The premium option for your business. Choose this option if you need a database and user authentication',
+        'The premium option for your business. Choose this option if you need a database and user authentication.',
       features: [
         'Static + Dynamic Data',
         'Database + User Authentication',
@@ -95,7 +95,7 @@ export default function Example() {
               </ul>
             </div>
 
-            <a
+            {/* <a
               href='#'
               className={classNames(
                 tier.mostPopular
@@ -105,7 +105,7 @@ export default function Example() {
               )}
             >
               {tier.cta}
-            </a>
+            </a> */}
           </div>
         ))}
       </div>
