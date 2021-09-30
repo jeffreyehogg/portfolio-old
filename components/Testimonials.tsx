@@ -13,14 +13,14 @@ const Testimonials = () => {
       name: 'Tim Cook',
       company: 'Apple',
       testimonial:
-        'Wow, he really knows how to get stuff done. His attention to detail nearly took my breath away',
+        'Wow, he is amazing! His attention to detail nearly took my breath away',
       image: '/images/headshots/timcook.png',
     },
     {
       name: 'Chuck Robbins',
       company: 'Cisco',
       testimonial:
-        'He is a great developer, he is a great team player. I am proud to work along side him',
+        'He is a great developer, he is a great team player. I am so proud of him',
       image: '/images/headshots/chuckrobbins.jpeg',
     },
   ]
@@ -31,7 +31,7 @@ const Testimonials = () => {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='relative'>
             <h2 className='text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10'>
-              What people are saying
+              What people are saying...
             </h2>
 
             <div className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8'>
