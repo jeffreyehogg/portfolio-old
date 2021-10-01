@@ -3,6 +3,7 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import Avatar from './Avatar'
+import { githubUrl, linkedInUrl, twitterUrl } from '../lib/constants'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
@@ -91,7 +92,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href='http://www.linkedin.com/in/jeffhogg/'
+                                href={linkedInUrl}
                                 target='_blank'
                                 rel='noreferrer'
                                 className={classNames(
@@ -106,7 +107,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href='http://github.com/jeffhogg86'
+                                href={githubUrl}
                                 target='_blank'
                                 rel='noreferrer'
                                 className={classNames(
@@ -121,7 +122,7 @@ export default function Navbar() {
                           <Menu.Item>
                             {({ active }) => (
                               <a
-                                href='https://twitter.com/JeffeHogg'
+                                href={twitterUrl}
                                 target='_blank'
                                 rel='noreferrer'
                                 className={classNames(

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import ReactPlayer from 'react-player/lazy'
-import { defaultVid } from '../lib/videoConstants'
+import { defaultVid } from '../lib/constants'
 
 export default function VideoPlayer() {
   const router = useRouter()

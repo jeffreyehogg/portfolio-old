@@ -1,4 +1,10 @@
 import { useState } from 'react'
+import {
+  githubUrl,
+  linkedInUrl,
+  twitterUrl,
+  youtubeUrl,
+} from '../lib/constants'
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('')
@@ -53,7 +59,7 @@ export default function ContactForm() {
                 <li>
                   <a
                     className='text-indigo-200 hover:text-indigo-100'
-                    href='https://www.linkedin.com/in/jeffhogg/'
+                    href={linkedInUrl}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -77,7 +83,7 @@ export default function ContactForm() {
                 <li>
                   <a
                     className='text-indigo-200 hover:text-indigo-100'
-                    href='https://github.com/jeffhogg86'
+                    href={githubUrl}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -101,7 +107,7 @@ export default function ContactForm() {
                 <li>
                   <a
                     className='text-indigo-200 hover:text-indigo-100'
-                    href='https://twitter.com/JeffeHogg'
+                    href={twitterUrl}
                     target='_blank'
                     rel='noreferrer'
                   >
@@ -125,7 +131,7 @@ export default function ContactForm() {
                 <li>
                   <a
                     className='text-indigo-200 hover:text-indigo-100'
-                    href='https://www.youtube.com/c/HoggMedia'
+                    href={youtubeUrl}
                     target='_blank'
                     rel='noreferrer'
                   >
