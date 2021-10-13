@@ -38,7 +38,7 @@ const Testimonials = () => {
               {testimonies.map((testimony) => (
                 <div
                   key={testimony.name}
-                  className='flex flex-col rounded-lg shadow-lg overflow-hidden p-5'
+                  className='flex flex-col bg-white rounded-lg shadow-lg overflow-hidden p-5'
                 >
                   <blockquote className='mt-10'>
                     <div className='max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900'>

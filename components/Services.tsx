@@ -50,7 +50,7 @@ const pricing = {
 
 export default function Services() {
   return (
-    <div className='max-w-7xl mx-auto py-24 px-4 bg-white sm:px-6 lg:px-8'>
+    <div className='max-w-7xl mx-auto py-24 px-4 bg-white sm:px-6 lg:px-8 rounded-lg shadow-lg mb-20'>
       <h2 className='text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10'>
         Services
       </h2>

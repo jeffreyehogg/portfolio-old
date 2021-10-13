@@ -28,7 +28,7 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
       <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
     </Head>
     <Navbar />
-    <main className='flex-1'>{children}</main>
+    <main className='flex-1 bg-gray-50 '>{children}</main>
     <Footer />
   </div>
 )
