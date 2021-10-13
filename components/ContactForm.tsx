@@ -1,6 +1,5 @@
 import { useRef, useState } from 'react'
 import { sendForm } from 'emailjs-com'
-import ContactInfo from './ContactInfo'
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('')
@@ -9,15 +8,15 @@ export default function ContactForm() {
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
-  const [submitted, setSubmitted] = useState(false)
-  const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
+  // const [submitted, setSubmitted] = useState(false)
+  // const [error, setError] = useState(false)
+  // const [success, setSuccess] = useState(false)
 
   const form = useRef()
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    // setSubmitted(true)
 
     sendForm(
       'jeffehogg',
