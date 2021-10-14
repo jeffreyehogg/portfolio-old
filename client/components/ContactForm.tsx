@@ -9,10 +9,8 @@ export default function ContactForm() {
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
-  // const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState(false)
   const [success, setSuccess] = useState(false)
-
   const [recaptchaLoad, setRecaptchaLoad] = useState(false)
   const [isVerified, setIsVerified] = useState(false)
 
@@ -30,9 +28,8 @@ export default function ContactForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // setSubmitted(true)
 
-    if (isVerified) {
+    if (isVerified && recaptchaLoad) {
       sendForm(
         'jeffehogg',
         'contact_form',
@@ -56,6 +53,13 @@ export default function ContactForm() {
       )
     } else {
       setError(true)
+    }
+
+    if (error) {
+      console.log('error')
+    }
+    if (success) {
+      console.log('success')
     }
   }
 
