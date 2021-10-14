@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { sendForm } from 'emailjs-com'
+var Recaptcha = require('react-recaptcha')
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('')
@@ -9,8 +10,21 @@ export default function ContactForm() {
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
   // const [submitted, setSubmitted] = useState(false)
-  // const [error, setError] = useState(false)
-  // const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+  const [success, setSuccess] = useState(false)
+
+  const [recaptchaLoad, setRecaptchaLoad] = useState(false)
+  const [isVerified, setIsVerified] = useState(false)
+
+  const recaptchaLoaded = () => {
+    setRecaptchaLoad(true)
+  }
+
+  const verifiedRecaptcha = (response) => {
+    if (response) {
+      setIsVerified(true)
+    }
+  }
 
   const form = useRef()
 
@@ -18,19 +32,31 @@ export default function ContactForm() {
     e.preventDefault()
     // setSubmitted(true)
 
-    sendForm(
-      'jeffehogg',
-      'contact_form',
-      form.current,
-      process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-    )
-
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setPhone('')
-    setSubject('')
-    setMessage('')
+    if (isVerified) {
+      sendForm(
+        'jeffehogg',
+        'contact_form',
+        form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      ).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text)
+          setSuccess(true)
+          setFirstName('')
+          setLastName('')
+          setEmail('')
+          setPhone('')
+          setSubject('')
+          setMessage('')
+        },
+        (err) => {
+          console.log('FAILED...', err)
+          setError(true)
+        }
+      )
+    } else {
+      setError(true)
+    }
   }
 
   return (
@@ -178,7 +204,13 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        <div className='sm:col-span-2 sm:flex sm:justify-end'>
+        <div className='sm:col-span-2 flex justify-between'>
+          <Recaptcha
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            render='explicit'
+            onloadCallback={recaptchaLoaded}
+            verifyCallback={verifiedRecaptcha}
+          />
           <button
             type='submit'
             onClick={handleSubmit}
