@@ -9,8 +9,6 @@ export default function ContactForm() {
   const [phone, setPhone] = useState('')
   const [subject, setSubject] = useState('')
   const [message, setMessage] = useState('')
-  const [error, setError] = useState(false)
-  const [success, setSuccess] = useState(false)
   const [recaptchaLoad, setRecaptchaLoad] = useState(false)
   const [isVerified, setIsVerified] = useState(false)
 
@@ -36,9 +34,8 @@ export default function ContactForm() {
         form.current,
         process.env.NEXT_PUBLIC_EMAILJS_USER_ID
       ).then(
-        (response) => {
-          console.log('SUCCESS!', response.status, response.text)
-          setSuccess(true)
+        () => {
+          alert('Your message has been sent!')
           setFirstName('')
           setLastName('')
           setEmail('')
@@ -46,20 +43,12 @@ export default function ContactForm() {
           setSubject('')
           setMessage('')
         },
-        (err) => {
-          console.log('FAILED...', err)
-          setError(true)
+        () => {
+          alert('Something went wrong, please try again.')
         }
       )
     } else {
-      setError(true)
-    }
-
-    if (error) {
-      console.log('error')
-    }
-    if (success) {
-      console.log('success')
+      alert('Please verify you are not a robot.')
     }
   }
 
@@ -68,9 +57,7 @@ export default function ContactForm() {
       <h3 className='text-lg font-medium text-gray-900'>Send me a message</h3>
       <form
         ref={form}
-        action='#'
-        method='POST'
-        className='mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
+        className='m-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
       >
         <div>
           <label
