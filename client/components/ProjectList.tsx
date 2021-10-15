@@ -8,20 +8,20 @@ const projects = [
     imageUrl: '/images/cardshop.png',
   },
   {
+    title: 'Iron Dojo',
+    href: 'https://the-iron-dojo.herokuapp.com/',
+    description:
+      '(Initial load is slow) A react web application built to track your strength and conditioning sessions over time. Create and log your workouts, view your progress in a chart.',
+
+    imageUrl: '/images/ironDojo-ss.png',
+  },
+  {
     title: 'Hogg Media',
     href: 'https://hoggmedia.com/',
     description:
       'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown.',
 
     imageUrl: '/images/hoggmedia.png',
-  },
-  {
-    title: 'Iron Dojo',
-    href: 'https://the-iron-dojo.herokuapp.com/',
-    description:
-      'A react based web application built to track your strength and conditioning sessions over time. Create and log your workouts, then view your progress displayed in a chart.',
-
-    imageUrl: '/images/ironDojo-ss.png',
   },
 
   {
@@ -67,7 +67,7 @@ export default function ProjectList() {
           {projects.map((post) => (
             <div
               key={post.title}
-              className='flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer transition duration-150 transform hover:scale-110'
+              className='flex flex-col rounded-lg shadow-lg overflow-hidden cursor-pointer'
             >
               <div className='flex-shrink-0'>
                 <a href={post.href} target='_blank' rel='noreferrer'>
