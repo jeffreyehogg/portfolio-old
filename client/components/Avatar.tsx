@@ -1,7 +1,11 @@
+import Image from 'next/image'
+
 function Avatar() {
   return (
-    <img
-      className='h-10 rounded-full cursor-pointer transition duration-150 transform hover:scale-110'
+    <Image
+      className='rounded-full cursor-pointer'
+      width={40}
+      height={40}
       loading='lazy'
       src='/images/headshots/me.jpg'
       alt='profile pic'
