@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const projects = [
   {
     title: 'CardShop',
@@ -71,10 +73,12 @@ export default function ProjectList() {
             >
               <div className='flex-shrink-0'>
                 <a href={post.href} target='_blank' rel='noreferrer'>
-                  <img
+                  <Image
                     className='h-48 w-full object-cover'
+                    width={400}
+                    height={200}
                     src={post.imageUrl}
-                    alt=''
+                    alt='Project screenshot'
                   />
                 </a>
               </div>
