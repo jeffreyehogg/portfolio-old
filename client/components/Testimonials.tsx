@@ -31,8 +31,9 @@ const Testimonials = () => {
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='relative'>
             <h2 className='text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10'>
-              What people are saying...
+              What people might be saying...
             </h2>
+            <p className='mt-3 text-xl text-gray-500 sm:mt-4'>(Probably) </p>
 
             <div className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8'>
               {testimonies.map((testimony) => (

@@ -53,8 +53,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='bg-gray-100 py-10 px-6 sm:px-10 lg:col-span-2 xl:p-12 rounded-lg shadow-lg'>
-      <h3 className='text-lg font-medium text-gray-900'>Send me a message</h3>
+    <div className='shadow-lg rounded-lg p-8 m-4 bg-white'>
       <form
         ref={form}
         className='m-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'

@@ -26,7 +26,7 @@ const Trusted = () => {
           <div className='col-span-1 flex justify-center md:col-span-2 lg:col-span-1'>
             <Image
               width={170}
-              height={50}
+              height={100}
               src='/images/logos/49ers.png'
               alt='San Francisco 49ers'
             />
@@ -34,7 +34,7 @@ const Trusted = () => {
           <div className='col-span-1 flex justify-center md:col-span-2 lg:col-span-1'>
             <Image
               width={200}
-              height={50}
+              height={100}
               src='/images/logos/giants.png'
               alt='San Francisco Giants'
             />
@@ -42,7 +42,7 @@ const Trusted = () => {
           <div className='col-span-1 flex justify-center md:col-span-3 lg:col-span-1'>
             <Image
               width={90}
-              height={50}
+              height={100}
               src='/images/logos/warriors.png'
               alt='Golden State Warriors'
             />
