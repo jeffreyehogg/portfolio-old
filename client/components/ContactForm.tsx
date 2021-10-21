@@ -53,10 +53,10 @@ export default function ContactForm() {
   }
 
   return (
-    <div className='shadow-lg rounded-lg p-8 m-4 bg-white'>
+    <div className='md:shadow-lg md:rounded-lg md:p-8 md:m-4 max-w-4xl mx-auto px-4'>
       <form
         ref={form}
-        className='m-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
+        className='md:m-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
       >
         <div>
           <label
@@ -194,26 +194,22 @@ export default function ContactForm() {
             />
           </div>
         </div>
-        <div className='col-span-1 md:col-span-2 flex justify-between'>
-          <div className='flex items-center'>
-            <Recaptcha
-              sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-              render='explicit'
-              onloadCallback={recaptchaLoaded}
-              verifyCallback={verifiedRecaptcha}
-            />
-          </div>
+        <div className='overflow-hidden'>
+          <Recaptcha
+            sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+            render='explicit'
+            onloadCallback={recaptchaLoaded}
+            verifyCallback={verifiedRecaptcha}
+          />
         </div>
         <div className='col-span-1 md:col-span-2'>
-          <div className='flex items-center'>
-            <button
-              type='submit'
-              onClick={handleSubmit}
-              className='mt-2 w-full inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto'
-            >
-              Submit
-            </button>
-          </div>
+          <button
+            type='submit'
+            onClick={handleSubmit}
+            className='mt-2 px-6 py-3 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-400 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:w-auto'
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>

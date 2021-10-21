@@ -6,7 +6,7 @@ export default function AboutMe() {
   return (
     <div className='mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24'>
       <div className='space-y-12 md:grid md:grid-cols-3 md:gap-8 md:space-y-0'>
-        <div className='space-y-2 sm:space-y-4 md:col-span-3'>
+        <div className='space-y-2 sm:space-y-4 md:col-span-3 md:max-w-2xl'>
           <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl'>
             About Me
           </h2>
@@ -58,10 +58,16 @@ export default function AboutMe() {
         </div>
 
         <div className='md:col-span-4'>
-          <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl lg:mt-6'>
+          <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl lg:my-4'>
             Contact
           </h2>
+          <p className='text-xl text-gray-500 leading-relaxed'>
+            Let's connect on Social Media!
+          </p>
           <Socials />
+          <p className='text-xl text-gray-500 leading-relaxed mt-6 lg:mt-8 mb-8'>
+            Send me a message using the form below.
+          </p>
           <ContactForm />
         </div>
       </div>
