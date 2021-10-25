@@ -8,7 +8,7 @@ const projects = [
       'An online marketplace for sportscards. Built with Next.js and Redux. When complete, user will be able to create an account, add items to shopping cart and checkout with PayPal.',
 
     imageUrl: '/images/cardshop.png',
-    githubUrl: 'https://github.com/jeffhogg86/cardshop',
+    githubUrl: 'https://github.com/jeffehogg/cardshop',
   },
   {
     title: 'Iron Dojo',
@@ -17,7 +17,7 @@ const projects = [
       '(Initial load is slow) A react web application built to track your strength and conditioning over time. Create and log your workouts, view your progress in a chart.',
 
     imageUrl: '/images/ironDojo-ss.png',
-    githubUrl: 'https://github.com/jeffhogg86/Iron-Dojo',
+    githubUrl: 'https://github.com/jeffehogg/Iron-Dojo',
   },
   {
     title: 'Hogg Media',
@@ -26,7 +26,7 @@ const projects = [
       'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown.',
 
     imageUrl: '/images/hoggmedia.png',
-    githubUrl: 'https://github.com/jeffhogg86/hoggmedia',
+    githubUrl: 'https://github.com/jeffehogg/hoggmedia',
   },
 
   {
@@ -36,7 +36,7 @@ const projects = [
       'A Discord style chat app built with react. Demonstrates basic chat functionality, creating a channel and sending messages. Implements Google Oauth for login.',
 
     imageUrl: '/images/chatter.png',
-    githubUrl: 'https://github.com/jeffhogg86/chatter',
+    githubUrl: 'https://github.com/jeffehogg/chatter',
   },
   {
     title: 'Shoflix',
@@ -45,7 +45,7 @@ const projects = [
       "A Netflix style video previewer. Makes an API call to render movies and shows by category. Some of the movie/show's play a trailer on a click. Deployed with firebase.",
 
     imageUrl: '/images/shoflix.png',
-    githubUrl: 'https://github.com/jeffhogg86/shoflix',
+    githubUrl: 'https://github.com/jeffehogg/shoflix',
   },
   {
     title: 'Hoggle Search',
@@ -54,7 +54,7 @@ const projects = [
       'A Google type search engine built with Next.js, Tailwind and the Google Search Api. Deployed with vercel.',
 
     imageUrl: '/images/hoggle.png',
-    githubUrl: 'https://github.com/jeffhogg86/hoggle-search',
+    githubUrl: 'https://github.com/jeffehogg/hoggle-search',
   },
 ]
 

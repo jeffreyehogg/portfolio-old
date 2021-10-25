@@ -1,5 +1,5 @@
 export const linkedInUrl = 'https://www.linkedin.com/in/jeffhogg/'
-export const githubUrl = 'http://github.com/jeffhogg86'
+export const githubUrl = 'http://github.com/jeffehogg'
 export const twitterUrl = 'https://twitter.com/JeffeHogg'
 export const youtubeUrl = 'https://www.youtube.com/c/HoggMedia'
 
