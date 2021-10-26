@@ -18,4 +18,4 @@ This project is licensed under the MIT License.
 
 [GitHub Repo](https://github.com/jeffehogg/portfolio)
 
-![Screenshot](/public/images/portfolio.png)
+![Screenshot](/client/public/images/portfolio.png)
