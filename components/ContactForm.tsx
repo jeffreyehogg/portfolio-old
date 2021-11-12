@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { sendForm } from 'emailjs-com'
-var Recaptcha = require('react-recaptcha')
+import Recaptcha from 'react-recaptcha'
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState('')
