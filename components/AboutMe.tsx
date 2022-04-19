@@ -11,7 +11,7 @@ export default function AboutMe() {
             About Me
           </h2>
           <p className='text-xl text-gray-500 leading-relaxed'>
-            I'm a Full Stack Developer based in the San Francisco Bay Area. I
+            I'm a Frontend Developer from the San Francisco Bay Area currently living in Houston, TX. I
             love cats, enjoy running, building web applications and learning new
             technologies. I have experience with modern frontend frameworks,
             server-side rendering, search-engine optimization, database schemas,
@@ -40,20 +40,8 @@ export default function AboutMe() {
           </h2>
 
           <div className='text-lg leading-6 font-medium space-y-1'>
-            <h3>Languages:</h3>
-            <p className='text-indigo-600'>JavaScript, TypeScript, Python</p>
-
-            <h3>Libraries:</h3>
-            <p className='text-indigo-600'>React, Nextjs, Node.js, Express</p>
-
-            <h3>Databases:</h3>
-            <p className='text-indigo-600'>MongoDB, PostgreSQL, MySQL</p>
-
-            <h3>Tools:</h3>
-            <p className='text-indigo-600'>Git, GitHub, Jest, Postman</p>
-
-            <h3>Other:</h3>
-            <p className='text-indigo-600'>Docker, Kubernetes, AWS, Heroku</p>
+            <h3>Languages, Libraries and frameworks:</h3>
+            <p className='text-indigo-600'>JavaScript, TypeScript, Angular, React, Nextjs, Node.js, Express, PlaneScale, MongoDB</p>
           </div>
         </div>
 
