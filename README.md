@@ -14,7 +14,7 @@ This project is licensed under the MIT License.
 
 ## Links
 
-[jeffhogg.io](https://www.jeffhogg.io)
+[hoggs.io](https://www.hoggs.io)
 
 [GitHub Repo](https://github.com/jeffehogg/portfolio)
 

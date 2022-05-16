@@ -20,10 +20,10 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
         content='A personal portfolio Website. Built with Next.js and Tailwind'
       />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://jeffhogg.io/' />
+      <meta property='og:url' content='https://hoggs.io/' />
       <meta
         property='og:image'
-        content='https://jeffhogg.io/images/portfolio.png'
+        content='https://hoggs.io/images/portfolio.png'
       />
       <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
     </Head>
