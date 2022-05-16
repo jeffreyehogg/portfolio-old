@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import { sendForm } from 'emailjs-com'
+import { sendForm } from '@emailjs/browser'
 import Recaptcha from 'react-recaptcha'
 
 export default function ContactForm() {
