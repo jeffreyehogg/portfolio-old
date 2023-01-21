@@ -29,6 +29,7 @@ export default class MyDocument extends Document {
             async
             defer
           ></script>
+          <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
         </Head>
         <body>
           <Main />

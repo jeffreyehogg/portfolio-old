@@ -77,7 +77,7 @@ export default function ProjectList() {
               key={post.title}
               className='flex flex-col rounded-lg shadow-lg overflow-hidden'
             >
-              <div className='flex-shrink-0'>
+              <div className='shrink-0'>
                 <Image
                   className='h-48 w-full object-cover'
                   width={400}

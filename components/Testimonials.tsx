@@ -47,7 +47,7 @@ const Testimonials = () => {
                     </div>
                     <footer className='mt-8'>
                       <div className='flex items-center justify-center'>
-                        <div className='md:flex-shrink-0'>
+                        <div className='md:shrink-0'>
                           <Image
                             className='mx-auto rounded-full'
                             src={testimony.image}

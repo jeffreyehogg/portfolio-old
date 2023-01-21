@@ -25,7 +25,6 @@ const Layout = ({ children, title = 'Jeff Hogg' }: Props) => (
         property='og:image'
         content='https://hoggs.io/images/portfolio.png'
       />
-      <link rel='stylesheet' href='https://rsms.me/inter/inter.css'></link>
     </Head>
     <Navbar />
     <main className='flex-1'>{children}</main>

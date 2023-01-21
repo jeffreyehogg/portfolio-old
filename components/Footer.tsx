@@ -3,7 +3,7 @@ const navigation = {
   main: [
     { name: 'Home', href: '/' },
     { name: 'Portfolio', href: '/portfolio' },
-    { name: 'Videos', href: '/videos' },
+    // { name: 'Videos', href: '/videos' },
     { name: 'About', href: '/about' },
   ],
   social: [
@@ -65,10 +65,11 @@ const Footer = () => {
         >
           {navigation.main.map((item) => (
             <div key={item.name} className='px-5 py-2'>
-              <Link href={item.href}>
-                <a className='text-base text-gray-400 hover:text-gray-300'>
-                  {item.name}
-                </a>
+              <Link
+                href={item.href}
+                className='text-base text-gray-400 hover:text-gray-300'
+              >
+                {item.name}
               </Link>
             </div>
           ))}

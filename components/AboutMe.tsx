@@ -11,11 +11,11 @@ export default function AboutMe() {
             About Me
           </h2>
           <p className='text-xl text-gray-500 leading-relaxed'>
-            I'm a Frontend Developer from the San Francisco Bay Area currently living in Houston, TX. I
-            love cats, enjoy running, building web applications and learning new
-            technologies. I have experience with modern frontend frameworks,
-            server-side rendering, search-engine optimization, database schemas,
-            user authentication, and more.
+            I'm a Frontend Developer from the San Francisco Bay Area currently
+            living in Houston, TX. I love cats, enjoy running, building web
+            applications and learning new technologies. I have experience with
+            modern frontend frameworks, server-side rendering, search-engine
+            optimization, database schemas, user authentication, and more.
           </p>
 
           <p className='text-xl text-gray-500 leading-relaxed'>
@@ -41,7 +41,10 @@ export default function AboutMe() {
 
           <div className='text-lg leading-6 font-medium space-y-1'>
             <h3>Languages, Libraries and frameworks:</h3>
-            <p className='text-indigo-600'>JavaScript, TypeScript, Angular, React, Nextjs, Node.js, Express, PlaneScale, MongoDB</p>
+            <p className='text-indigo-600'>
+              JavaScript, TypeScript, Angular, React, Nextjs, Node.js, Express,
+              PlaneScale, MongoDB
+            </p>
           </div>
         </div>
 

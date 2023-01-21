@@ -1,11 +1,10 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { CheckIcon } from '@heroicons/react/outline'
+import { CheckIcon } from '@heroicons/react/24/outline'
 
 const pricing = {
   tiers: [
     {
       title: 'Standard Website',
-      price: 249,
       description:
         'The essentials for your business. Choose this option if your data does not change very often.',
       features: ['Static data', '2 revisions', 'Satisfaction guaranteed'],
@@ -14,7 +13,6 @@ const pricing = {
     },
     {
       title: 'Dynamic Website',
-      price: 499,
       description:
         'A step-up from the Standard. Choose this option if you have dynamic data that changes frequently.',
       features: [
@@ -28,7 +26,6 @@ const pricing = {
     },
     {
       title: 'Premium Website',
-      price: 999,
       description:
         'The premium option for your business. Choose this option if you need a database and user authentication.',
       features: [
@@ -38,15 +35,11 @@ const pricing = {
         'Advanced analytics',
         'Satisfaction guaranteed',
       ],
-      cta: 'Premuim',
+      cta: 'Premium',
       mostPopular: false,
     },
   ],
 }
-
-// function classNames(...classes: string[]) {
-//   return classes.filter(Boolean).join(' ')
-// }
 
 export default function Services() {
   return (
@@ -72,11 +65,7 @@ export default function Services() {
                   Most popular
                 </p>
               ) : null}
-              <p className='mt-4 flex items-baseline text-gray-900'>
-                <span className='text-5xl font-extrabold tracking-tight'>
-                  ${tier.price}
-                </span>
-              </p>
+
               <p className='mt-6 text-gray-500'>{tier.description}</p>
 
               {/* Feature list */}
@@ -84,7 +73,7 @@ export default function Services() {
                 {tier.features.map((feature) => (
                   <li key={feature} className='flex'>
                     <CheckIcon
-                      className='flex-shrink-0 w-6 h-6 text-indigo-500'
+                      className='shrink-0 w-6 h-6 text-indigo-500'
                       aria-hidden='true'
                     />
                     <span className='ml-3 text-gray-500'>{feature}</span>

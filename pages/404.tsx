@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 const NotFound = () => {
   return (
     <Layout title='404'>
-      <main className='flex-grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8'>
+      <main className='grow flex flex-col justify-center max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='py-36'>
           <div className='text-center'>
             <p className='text-sm font-semibold text-indigo-400 uppercase tracking-wide'>

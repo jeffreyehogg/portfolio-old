@@ -22,15 +22,13 @@ const VideosList = ({ data }: any) => {
                   query: { id: `${resourceId.videoId}` },
                 }}
               >
-                <a>
-                  <Image
-                    className='cursor-pointer'
-                    src={thumbnails.maxres.url}
-                    height={thumbnails.maxres.height}
-                    width={thumbnails.maxres.width}
-                    alt={title}
-                  />
-                </a>
+                <Image
+                  className='cursor-pointer'
+                  src={thumbnails.maxres.url}
+                  height={thumbnails.maxres.height}
+                  width={thumbnails.maxres.width}
+                  alt={title}
+                />
               </Link>
             </div>
           )
