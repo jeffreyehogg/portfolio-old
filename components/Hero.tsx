@@ -1,4 +1,3 @@
-import Avatar from './Avatar'
 import Typist from './Typist'
 
 export default function Hero() {
