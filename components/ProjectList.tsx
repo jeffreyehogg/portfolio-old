@@ -5,7 +5,7 @@ const projects = [
     title: 'CardShop',
     href: 'https://cardshop.vercel.app',
     description:
-      'An online marketplace for sportscards. Built with Next.js and Redux. When complete, user will be able to create an account, add items to shopping cart and checkout with PayPal.',
+      'An example of online marketplace for sportscards. Built with Next.js and Redux. When completed, the user will be able to create an account, add items to shopping cart, and checkout with PayPal.',
 
     imageUrl: '/images/cardshop.png',
     githubUrl: 'https://github.com/jeffehogg/cardshop',
@@ -14,7 +14,7 @@ const projects = [
     title: 'Iron Dojo',
     href: 'https://the-iron-dojo.herokuapp.com/',
     description:
-      '(Initial load is slow) A react web application built to track your strength and conditioning over time. Create and log your workouts, view your progress in a chart.',
+      '(Slow load) A react web app built to track your strength and conditioning over time. Create and log your workouts, view your progress in a chart.',
 
     imageUrl: '/images/ironDojo-ss.png',
     githubUrl: 'https://github.com/jeffehogg/Iron-Dojo',
@@ -23,7 +23,7 @@ const projects = [
     title: 'Hogg Media',
     href: 'https://hoggmedia.com/',
     description:
-      'A static blog/vlog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown.',
+      'A static blog site built with Next.js. Uses Next.js, Server-Side Rendering, TailwindCSS, YouTube API, Markdown.',
 
     imageUrl: '/images/hoggmedia.png',
     githubUrl: 'https://github.com/jeffehogg/hoggmedia',

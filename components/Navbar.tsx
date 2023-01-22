@@ -8,6 +8,7 @@ import { githubUrl, linkedInUrl, twitterUrl } from '../lib/constants'
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'Portfolio', href: '/portfolio', current: false },
+  // TODO: Fix Videos page
   // { name: 'Videos', href: '/videos', current: false },
   { name: 'About', href: '/about', current: false },
 ]

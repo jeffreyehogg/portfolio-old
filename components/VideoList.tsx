@@ -18,8 +18,10 @@ const VideosList = ({ data }: any) => {
             <div key={id} className='mt-2'>
               <Link
                 href={{
-                  pathname: '/videos/[id]',
-                  query: { id: `${resourceId.videoId}` },
+                  // TODO: Fix video page
+                  // pathname: '/videos/[id]',
+                  // query: { id: `${resourceId.videoId}` },
+                  pathname: `https://www.youtube.com/watch?v=${resourceId?.videoId}`,
                 }}
               >
                 <Image

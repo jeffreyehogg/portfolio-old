@@ -1,6 +1,6 @@
 export const linkedInUrl = 'https://www.linkedin.com/in/jeffhogg/'
-export const githubUrl = 'http://github.com/jehoggio'
-export const twitterUrl = 'https://twitter.com/jehoggio'
+export const githubUrl = 'http://github.com/jehogg'
+export const twitterUrl = 'https://twitter.com/jehoggs'
 export const youtubeUrl = 'https://www.youtube.com/c/HoggMedia'
 
 export const channelId = 'UCSTOp5FPjNXBmop3o47yZaQ'

@@ -6,21 +6,20 @@ const Testimonials = () => {
       name: 'Elon Musk',
       company: 'Space X',
       testimonial:
-        'Jeff is pretty cool, I would hire him in a heartbeat if I ever have the chance',
+        'Jeff is a great guy, I would hire him in a heartbeat if he would return my calls.',
       image: '/images/headshots/elonmusk.jpeg',
     },
     {
       name: 'Tim Cook',
       company: 'Apple',
-      testimonial:
-        'Wow, he is amazing! His attention to detail nearly took my breath away',
+      testimonial: "Wow, he is amazing! I'm surprised he's not my boss yet!",
       image: '/images/headshots/timcook.png',
     },
     {
       name: 'Chuck Robbins',
       company: 'Cisco',
       testimonial:
-        'He is a great developer, he is a great team player. I am so proud of him',
+        "Jeff is probably the best developer I have ever met. He's definitely my best hire.",
       image: '/images/headshots/chuckrobbins.jpeg',
     },
   ]

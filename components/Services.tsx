@@ -14,7 +14,7 @@ const pricing = {
     {
       title: 'Dynamic Website',
       description:
-        'A step-up from the Standard. Choose this option if you have dynamic data that changes frequently.',
+        'A step-up from the Standard. Choose this option if you have data that changes frequently.',
       features: [
         'Static + Dynamic Data',
         '3 revisions',
@@ -27,7 +27,7 @@ const pricing = {
     {
       title: 'Premium Website',
       description:
-        'The premium option for your business. Choose this option if you need a database and user authentication.',
+        'The premium option for your business. Choose this option if you need the ability to manage data and collect payments.',
       features: [
         'Static + Dynamic Data',
         'Database + User Authentication',

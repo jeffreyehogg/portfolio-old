@@ -6,10 +6,10 @@ const Trusted = () => {
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='max-w-4xl mx-auto text-center'>
           <h2 className='text-3xl font-extrabold text-gray-900 sm:text-4xl'>
-            Trusted by companies all over the world
+            Trusted by some of the most innovative companies in the world.
           </h2>
           <p className='mt-3 text-xl text-gray-500 sm:mt-4'>
-            Just a few of the companies I've worked with.
+            Here are a few that I've worked with:
           </p>
         </div>
       </div>

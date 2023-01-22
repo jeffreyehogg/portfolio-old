@@ -6,8 +6,8 @@ function Avatar() {
     <Image
       className='rounded-full cursor-pointer'
       loading='eager'
-      width={60}
-      height={60}
+      width={120}
+      height={120}
       src={headshot}
       alt='profile pic'
     />

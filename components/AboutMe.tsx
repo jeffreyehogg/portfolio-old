@@ -11,16 +11,16 @@ export default function AboutMe() {
             About Me
           </h2>
           <p className='text-xl text-gray-500 leading-relaxed'>
-            I'm a Frontend Developer from the San Francisco Bay Area currently
-            living in Houston, TX. I love cats, enjoy running, building web
-            applications and learning new technologies. I have experience with
-            modern frontend frameworks, server-side rendering, search-engine
-            optimization, database schemas, user authentication, and more.
+            A full-time software engineer with hands-on experience in
+            enterprise-level software development. Specialized in front-end,
+            industry-standard clean code, with a keen eye for design.
+            Well-rounded in modern technologies and frameworks like Angular,
+            React, TypeScript, and much more.
           </p>
 
           <p className='text-xl text-gray-500 leading-relaxed'>
-            I'm happy to connect and collaborate with others. If you're
-            interested in working with me, please reach out!
+            I'm happy to connect, collaborate, and share my knowledge with
+            others. I'm always looking for new opportunities to learn and grow.
           </p>
         </div>
 

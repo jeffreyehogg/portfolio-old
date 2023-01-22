@@ -10,10 +10,10 @@ const NotFound = () => {
               404 error
             </p>
             <h1 className='mt-2 text-4xl font-extrabold text-gray-900 tracking-tight sm:text-5xl'>
-              Page not found.
+              Wow, you found a page that doesn't exist!
             </h1>
             <p className='mt-2 text-base text-gray-500'>
-              Sorry, the page you’re looking for could not be found.
+              How did you even get here? I'm impressed.
             </p>
             <div className='mt-6'>
               <a
