@@ -16,6 +16,6 @@ This project is licensed under the MIT License.
 
 [hoggs.io](https://www.hoggs.io)
 
-[GitHub Repo](https://github.com/jeffehogg/portfolio)
+[GitHub Repo](https://github.com/jeffreyehogg/portfolio)
 
 ![Screenshot](/client/public/images/portfolio.png)
