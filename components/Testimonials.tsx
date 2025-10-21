@@ -34,32 +34,33 @@ const Testimonials = () => {
 						</h2>
 						<p className='mt-3 text-xl text-gray-500 sm:mt-4'>(Probably) </p>
 
-						<div className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8'>
+						<div className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8 items-stretch'>
 							{testimonies.map((testimony) => (
 								<div
 									key={testimony.name}
-									className='flex flex-col bg-white rounded-lg shadow-lg overflow-hidden p-5'
+									className='flex flex-col bg-white rounded-lg shadow-lg overflow-hidden p-8 transition-shadow duration-300 hover:shadow-xl'
 								>
-									<blockquote className='mt-10'>
-										<div className='max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900'>
-											<p>&ldquo;{testimony.testimonial}&rdquo;</p>
+									<blockquote className='flex flex-col flex-grow'>
+										<div className='flex-grow'>
+											<p className='italic text-xl leading-8 text-gray-700'>
+												&ldquo;{testimony.testimonial}&rdquo;
+											</p>
 										</div>
 										<footer className='mt-8'>
-											<div className='flex items-center justify-center'>
-												<div className='md:shrink-0 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer'>
+											<div className='flex items-center'>
+												<div className='shrink-0 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer'>
 													<Image
 														className='mx-auto rounded-full'
 														src={testimony.image}
 														alt={testimony.name}
-														width={100}
-														height={100}
+														width={64}
+														height={64}
 													/>
 												</div>
-												<div className='mt-3 text-center md:mt-0 md:ml-4 md:items-center'>
+												<div className='ml-4'>
 													<div className='text-base font-medium text-gray-900'>
 														{testimony.name}
 													</div>
-
 													<div className='text-base font-medium text-gray-500'>
 														CEO, {testimony.company}
 													</div>
