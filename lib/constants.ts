@@ -1,7 +1,7 @@
-export const linkedInUrl = 'https://www.linkedin.com/in/jeffhogg/'
-export const githubUrl = 'http://github.com/jehogg'
-export const twitterUrl = 'https://twitter.com/hoggio'
-export const youtubeUrl = 'https://www.youtube.com/c/HoggMedia'
+export const linkedInUrl = 'https://www.linkedin.com/in/jeffreyehogg/'
+export const githubUrl = 'http://github.com/jeffreyehogg'
+export const twitterUrl = 'https://twitter.com/jeffreyehogg'
+export const youtubeUrl = 'https://www.youtube.com/c/jeffreyehogg'
 
 export const channelId = 'UCSTOp5FPjNXBmop3o47yZaQ'
 export const uploadsId = 'UUSTOp5FPjNXBmop3o47yZaQ'
