@@ -4,7 +4,7 @@ import headshot from '../public/images/headshots/me.jpg'
 function Avatar() {
 	return (
 		<Image
-			className='rounded-full cursor-pointer object-cover'
+			className='rounded-full cursor-pointer object-cover h-full w-full'
 			loading='eager'
 			width={40}
 			height={40}

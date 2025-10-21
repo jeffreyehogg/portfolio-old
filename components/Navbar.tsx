@@ -67,23 +67,33 @@ export default function Navbar() {
 								<Menu as='div' className='ml-3 relative'>
 									{({ open }) => (
 										<>
-											<Menu.Button className='bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
+											{/* --- Updated Button --- */}
+											<Menu.Button
+												className={classNames(
+													'relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800',
+													'h-10 w-10', // Explicitly set height and width
+													'items-center justify-center', // Center content
+													'transition-opacity hover:opacity-90 focus:opacity-90' // Add hover/focus state
+												)}
+											>
+												<span className='absolute -inset-1.5' />
 												<span className='sr-only'>Open user menu</span>
 												<Avatar />
 											</Menu.Button>
+											{/* --- End Updated Button --- */}
 											<Transition
 												show={open}
 												as={Fragment}
 												enter='transition ease-out duration-100'
-												enterFrom='opacity-0 scale-95'
-												enterTo='opacity-100 scale-100'
+												enterFrom='transform opacity-0 scale-95'
+												enterTo='transform opacity-100 scale-100'
 												leave='transition ease-in duration-75'
-												leaveFrom='opacity-100 scale-100'
-												leaveTo='opacity-0 scale-95'
+												leaveFrom='transform opacity-100 scale-100'
+												leaveTo='transform opacity-0 scale-95'
 											>
 												<Menu.Items
 													static
-													className=' z-10 origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'
+													className='absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none'
 												>
 													<Menu.Item>
 														{({ active }) => (
@@ -140,19 +150,19 @@ export default function Navbar() {
 					</div>
 
 					<Disclosure.Panel className='sm:hidden'>
-						<div className='px-2 pt-2 pb-3 space-y-1'>
+						<div className='space-y-1 px-2 pb-3 pt-2'>
 							{navigation.map((item) => {
 								const isCurrent = router.pathname === item.href
 								return (
 									<Disclosure.Button
 										key={item.name}
-										as='a' // Render as an anchor tag
+										as='a'
 										href={item.href}
 										className={classNames(
 											isCurrent
 												? 'bg-gray-900 text-white'
 												: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-											'block px-3 py-2 rounded-md text-base font-medium'
+											'block rounded-md px-3 py-2 text-base font-medium'
 										)}
 										aria-current={isCurrent ? 'page' : undefined}
 									>
