@@ -1,13 +1,15 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Avatar from './Avatar'
 import { githubUrl, linkedInUrl, twitterUrl } from '../lib/constants'
+import { useRouter } from 'next/router'
 
 const navigation = [
 	{ name: 'Home', href: '/', current: false },
 	{ name: 'Portfolio', href: '/portfolio', current: false },
+	// TODO: Fix Videos page
+	// { name: 'Videos', href: '/videos', current: false },
 	{ name: 'About', href: '/about', current: false },
 ]
 
@@ -16,6 +18,8 @@ function classNames(...classes: string[]): string {
 }
 
 export default function Navbar() {
+	const router = useRouter()
+
 	return (
 		<Disclosure as='nav' className='bg-space top-0'>
 			{({ open }) => (
@@ -36,30 +40,34 @@ export default function Navbar() {
 							<div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
 								<div className='hidden sm:block sm:ml-6'>
 									<div className='flex space-x-4'>
-										{navigation.map((item) => (
-											<a
-												key={item.name}
-												href={item.href}
-												className={classNames(
-													item.current
-														? 'bg-gray-900 text-white'
-														: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-													'px-3 py-2 rounded-md text-sm font-medium'
-												)}
-												aria-current={item.current ? 'page' : undefined}
-											>
-												{item.name}
-											</a>
-										))}
+										{navigation.map((item) => {
+											const isCurrent = router.pathname === item.href
+
+											return (
+												<a
+													key={item.name}
+													href={item.href}
+													className={classNames(
+														isCurrent
+															? 'bg-gray-900 text-white'
+															: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+														'px-3 py-2 rounded-md text-sm font-medium'
+													)}
+													aria-current={isCurrent ? 'page' : undefined}
+												>
+													{item.name}
+												</a>
+											)
+										})}
 									</div>
 								</div>
 							</div>
 							<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
 								{/* Profile dropdown */}
-								<Menu as='div' className='ml-3 relative rounded-full'>
+								<Menu as='div' className='ml-3 relative'>
 									{({ open }) => (
 										<>
-											<Menu.Button className='bg-gray-800 flex text-sm focus:outline-none '>
+											<Menu.Button className='bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800'>
 												<span className='sr-only'>Open user menu</span>
 												<Avatar />
 											</Menu.Button>
@@ -133,21 +141,25 @@ export default function Navbar() {
 
 					<Disclosure.Panel className='sm:hidden'>
 						<div className='px-2 pt-2 pb-3 space-y-1'>
-							{navigation.map((item) => (
-								<a
-									key={item.name}
-									href={item.href}
-									className={classNames(
-										item.current
-											? 'bg-gray-900 text-white'
-											: 'text-gray-300 hover:bg-gray-700 hover:text-white',
-										'block px-3 py-2 rounded-md text-base font-medium'
-									)}
-									aria-current={item.current ? 'page' : undefined}
-								>
-									{item.name}
-								</a>
-							))}
+							{navigation.map((item) => {
+								const isCurrent = router.pathname === item.href
+								return (
+									<Disclosure.Button
+										key={item.name}
+										as='a' // Render as an anchor tag
+										href={item.href}
+										className={classNames(
+											isCurrent
+												? 'bg-gray-900 text-white'
+												: 'text-gray-300 hover:bg-gray-700 hover:text-white',
+											'block px-3 py-2 rounded-md text-base font-medium'
+										)}
+										aria-current={isCurrent ? 'page' : undefined}
+									>
+										{item.name}
+									</Disclosure.Button>
+								)
+							})}
 						</div>
 					</Disclosure.Panel>
 				</>
