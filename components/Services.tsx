@@ -1,4 +1,7 @@
 import { CheckIcon } from '@heroicons/react/24/outline'
+function classNames(...classes: string[]) {
+	return classes.filter(Boolean).join(' ')
+}
 
 const pricing = {
 	tiers: [
@@ -7,7 +10,7 @@ const pricing = {
 			description:
 				'The essentials for your business. Choose this option if your data does not change very often.',
 			features: ['Static data', '2 revisions', 'Satisfaction guaranteed'],
-			cta: 'Standard',
+			cta: 'Learn More',
 			mostPopular: false,
 		},
 		{
@@ -20,7 +23,7 @@ const pricing = {
 				'Website analytics',
 				'Satisfaction guaranteed',
 			],
-			cta: 'Dynamic',
+			cta: 'Learn More',
 			mostPopular: true,
 		},
 		{
@@ -34,7 +37,7 @@ const pricing = {
 				'Advanced analytics',
 				'Satisfaction guaranteed',
 			],
-			cta: 'Premium',
+			cta: 'Learn More',
 			mostPopular: false,
 		},
 	],
@@ -53,10 +56,14 @@ export default function Services() {
 				{pricing.tiers.map((tier) => (
 					<div
 						key={tier.title}
-						// --- I'VE ADDED THE HOVER EFFECT HERE ---
-						className='relative p-8 bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer'
+						className={classNames(
+							tier.mostPopular
+								? 'border-2 border-indigo-500 shadow-lg'
+								: 'border border-gray-200 shadow-sm',
+							'relative p-8 bg-white rounded-2xl flex flex-col transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl cursor-pointer'
+						)}
 					>
-						<div className='flex-1'>
+						<div className='flex-1 flex flex-col'>
 							<h3 className='text-xl font-semibold text-gray-900'>
 								{tier.title}
 							</h3>
@@ -69,7 +76,7 @@ export default function Services() {
 							<p className='mt-6 text-gray-500'>{tier.description}</p>
 
 							{/* Feature list */}
-							<ul role='list' className='mt-6 space-y-6'>
+							<ul role='list' className='mt-8 space-y-4 flex-grow'>
 								{tier.features.map((feature) => (
 									<li key={feature} className='flex'>
 										<CheckIcon
@@ -81,6 +88,18 @@ export default function Services() {
 								))}
 							</ul>
 						</div>
+
+						<a
+							href='/about#contact-form'
+							className={classNames(
+								tier.mostPopular
+									? 'bg-indigo-500 text-white hover:bg-indigo-600'
+									: 'bg-indigo-50 text-indigo-700 hover:bg-indigo-100',
+								'mt-10 block w-full py-3 px-6 border border-transparent rounded-md text-center font-medium'
+							)}
+						>
+							{tier.cta}
+						</a>
 					</div>
 				))}
 			</div>
