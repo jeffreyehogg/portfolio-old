@@ -1,4 +1,23 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion'
+
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+}
+
+const itemVariants = {
+	hidden: { y: 20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+	},
+}
 
 const Testimonials = () => {
 	const testimonies = [
@@ -34,10 +53,18 @@ const Testimonials = () => {
 						</h2>
 						<p className='mt-3 text-xl text-gray-500 sm:mt-4'>(Probably) </p>
 
-						<div className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8 items-stretch'>
+						{/* --- Updated this motion.div --- */}
+						<motion.div
+							className='mt-8 grid grid-cols-1 md:grid-cols-3  gap-8 items-stretch'
+							variants={containerVariants}
+							initial='hidden'
+							whileInView='visible' // Changed animate to whileInView
+							viewport={{ once: true, amount: 0.2 }} // Trigger once when 20% is visible
+						>
 							{testimonies.map((testimony) => (
-								<div
+								<motion.div
 									key={testimony.name}
+									variants={itemVariants}
 									className='flex flex-col bg-white rounded-lg shadow-lg overflow-hidden p-8 transition-shadow duration-300 hover:shadow-xl'
 								>
 									<blockquote className='flex flex-col flex-grow'>
@@ -68,9 +95,9 @@ const Testimonials = () => {
 											</div>
 										</footer>
 									</blockquote>
-								</div>
+								</motion.div>
 							))}
-						</div>
+						</motion.div>
 					</div>
 				</div>
 			</section>
