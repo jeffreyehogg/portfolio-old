@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { motion } from 'framer-motion' // Make sure motion is imported
 
 const projects = [
 	{
@@ -7,7 +8,7 @@ const projects = [
 		description:
 			'A full stack web app built with Next.js, TailwindCSS, and Prisma. Pending a booking system, admin dashboard, and user authentication.',
 		imageUrl: '/images/southern.png',
-		tags: ['Next.js', 'Prisma', 'TailwindCSS'], // Added tags
+		tags: ['Next.js', 'Prisma', 'TailwindCSS'],
 	},
 	{
 		title: 'Texas Tint',
@@ -15,9 +16,28 @@ const projects = [
 		description:
 			'A static website built with Next.js and TailwindCSS. Features a contact form and a gallery of previous work.',
 		imageUrl: '/images/texas-tint.png',
-		tags: ['Next.js', 'TailwindCSS'], // Added tags
+		tags: ['Next.js', 'TailwindCSS'],
 	},
 ]
+
+// Animation variants
+const containerVariants = {
+	hidden: { opacity: 0 },
+	visible: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.2,
+		},
+	},
+}
+
+const itemVariants = {
+	hidden: { y: 20, opacity: 0 },
+	visible: {
+		y: 0,
+		opacity: 1,
+	},
+}
 
 export default function ProjectList() {
 	return (
@@ -32,10 +52,19 @@ export default function ProjectList() {
 				<p className='mt-6 max-w-2xl text-xl text-gray-500'>
 					Check out some projects I've worked on.
 				</p>
-				<div className='mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none items-stretch'>
+
+				{/* Apply container variants to the grid */}
+				<motion.div
+					className='mt-12 max-w-lg mx-auto grid gap-8 lg:grid-cols-3 lg:max-w-none items-stretch'
+					variants={containerVariants}
+					initial='hidden'
+					animate='visible'
+				>
 					{projects.map((post) => (
-						<div
+						// Apply item variants to each card
+						<motion.div
 							key={post.title}
+							variants={itemVariants}
 							className='group flex flex-col rounded-lg shadow-lg overflow-hidden transition-all duration-300 ease-in-out hover:shadow-2xl hover:scale-105'
 						>
 							<div className='shrink-0 overflow-hidden'>
@@ -48,6 +77,7 @@ export default function ProjectList() {
 								/>
 							</div>
 							<div className='flex-1 bg-white p-6 flex flex-col justify-between'>
+								{/* --- Start of Card Content --- */}
 								<div className='flex-1'>
 									<div className='flex space-x-2'>
 										{post.tags.map((tag) => (
@@ -66,29 +96,22 @@ export default function ProjectList() {
 										{post.description}
 									</p>
 								</div>
-
 								<div className='mt-6 flex space-x-4'>
 									<a
 										href={post.href}
 										target='_blank'
 										rel='noopener noreferrer'
-										className='inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md shadow-sm text-white bg-indigo-700  hover:bg-opacity-70 transition ease-in-out duration-150'
+										className='inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md shadow-sm text-white bg-indigo-700 hover:bg-opacity-70 transition ease-in-out duration-150'
 									>
 										View Live
 									</a>
-									{/* <a
-                    href="#" // Add GitHub link here
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 border border-gray-300 text-sm leading-5 font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 transition ease-in-out duration-150"
-                  >
-                    View Code
-                  </a> */}
+									{/* Optional View Code button */}
 								</div>
+								{/* --- End of Card Content --- */}
 							</div>
-						</div>
+						</motion.div>
 					))}
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	)
